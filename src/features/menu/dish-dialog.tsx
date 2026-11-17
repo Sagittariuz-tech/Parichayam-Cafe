@@ -2,7 +2,7 @@ import { useLayoutEffect, useRef, useState, type FormEvent } from 'react';
 import Image from 'next/image';
 import { gsap } from 'gsap';
 import { CloseDialog, closeOnBackdrop } from '@/components/modal-controls';
-import { nextCharacter, OrderCharacter } from '@/features/hospitality/characters';
+import { nextOrderGreeting, OrderCharacter } from '@/features/hospitality/characters';
 import { useServiceSubmission } from '@/features/hospitality/client';
 import type { OrderReceipt } from '@/features/hospitality/types';
 import { orderNoteLimit, orderQuantityLimit, tableCount, tableNumber } from '@/lib/table-service';
@@ -175,7 +175,7 @@ export default function DishDialog({ dish, onClose }: { dish: Dish | null; onClo
   const dialog = useRef<HTMLDialogElement>(null);
   const receiptTitle = useRef<HTMLDivElement>(null);
   const [busy, setBusy] = useState(false);
-  const [confirmation, setConfirmation] = useState<{ receipt: OrderReceipt; character: number } | null>(null);
+  const [confirmation, setConfirmation] = useState<{ receipt: OrderReceipt; greeting: ReturnType<typeof nextOrderGreeting> } | null>(null);
 
   useLayoutEffect(() => {
     const node = dialog.current;
@@ -198,11 +198,11 @@ export default function DishDialog({ dish, onClose }: { dish: Dish | null; onClo
       onClose={() => { setConfirmation(null); onClose(); }}>
       <CloseDialog label="Close dish details" floating disabled={busy} />
       {confirmation ? <div className="receipt-pane" ref={receiptTitle}>
-        <OrderCharacter character={confirmation.character} dish={confirmation.receipt.dish} />
+        <OrderCharacter greeting={confirmation.greeting} dish={confirmation.receipt.dish} />
         <p className="receipt-meta">Table {confirmation.receipt.table_number} · Qty {confirmation.receipt.quantity} · Order {confirmation.receipt.id.slice(0, 8).toUpperCase()}</p>
         <form method="dialog"><button className="button button-primary" type="submit">Back to the menu</button></form>
       </div> : dish && <DishOrder key={dish.id} dish={dish} onBusy={setBusy}
-        onReceipt={receipt => setConfirmation({ receipt, character: nextCharacter() })} />}
+        onReceipt={receipt => setConfirmation({ receipt, greeting: nextOrderGreeting() })} />}
     </dialog>
   );
 }

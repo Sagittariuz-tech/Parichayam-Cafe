@@ -51,6 +51,41 @@ function bookingTime(date: unknown, time: unknown) {
   return Date.parse(date + 'T' + time + ':00+05:30');
 }
 
+function seatingEnd(starts: number) {
+  const duration = Number(process.env.CAFE_RESERVATION_MINUTES || 90);
+  if (!Number.isSafeInteger(duration) || duration < 1) throw new Error('Invalid CAFE_RESERVATION_MINUTES.');
+  return starts + duration * 60_000;
+}
+
+function reservationTables() {
+  const configured = process.env.CAFE_RESERVATION_TABLE_CAPACITIES;
+  const capacities = configured?.split(',').map(value => Number(value.trim())) ?? Array<number>(tableCount).fill(4);
+  if (capacities.length !== tableCount || capacities.some(capacity => !Number.isSafeInteger(capacity) || capacity < 1)) {
+    throw new Error('CAFE_RESERVATION_TABLE_CAPACITIES must contain a positive seat count for each table.');
+  }
+  return capacities.map((seats, index) => ({ number: index + 1, seats })).sort((a, b) => a.seats - b.seats);
+}
+
+function reservationTransaction<T>(action: (db: ReturnType<typeof getDatabase>) => T) {
+  const db = getDatabase();
+  db.exec('BEGIN IMMEDIATE;');
+  try {
+    const result = action(db);
+    db.exec('COMMIT;');
+    return result;
+  } catch (error) {
+    db.exec('ROLLBACK;');
+    throw error;
+  }
+}
+
+function reservedTables(db: ReturnType<typeof getDatabase>, starts: number, ends: number) {
+  const rows = db.prepare(
+    "SELECT table_number FROM reservations WHERE status = 'confirmed' AND starts_at < ? AND ends_at > ?"
+  ).all(ends, starts);
+  return new Set(rows.map(row => row.table_number));
+}
+
 export function submitReservation(input: Record<string, unknown>) {
   const id = reference(input.reference);
   const name = textField(input.name, 80, 'Name', true);
@@ -61,26 +96,39 @@ export function submitReservation(input: Record<string, unknown>) {
   const party = count(input.partySize, 99, 'Party size');
   const starts = bookingTime(input.date, input.time);
   const note = textField(input.note, 240, 'Reservation note');
-  const db = getDatabase();
-  const select = db.prepare('SELECT * FROM reservations WHERE id = ?');
-  let row = select.get(id) as ReservationRow | undefined;
-  if (!row) {
+  return reservationTransaction(db => {
+    const existing = db.prepare('SELECT * FROM reservations WHERE id = ?').get(id) as ReservationRow | undefined;
+    if (existing) {
+      if (existing.guest_name !== name || existing.phone !== phone || existing.party_size !== party || existing.starts_at !== starts || existing.note !== note) {
+        throw new RequestError('This reference belongs to another reservation.', 409);
+      }
+      return reservationReceipt(existing);
+    }
+
     if (starts <= Date.now()) throw new RequestError('Choose a time in the future.');
+    const ends = seatingEnd(starts);
+    const tables = reservationTables();
+    const eligible = tables.filter(table => table.seats >= party);
+    if (!eligible.length) {
+      const largest = Math.max(...tables.map(table => table.seats));
+      throw new RequestError('The largest table available to book online seats ' + largest + '. Contact the café for a larger party.');
+    }
+    const occupied = reservedTables(db, starts, ends);
+    const table = eligible.find(candidate => !occupied.has(candidate.number));
+    if (!table) throw new RequestError('Tables for this party size are booked at that time. Please choose another time.', 409);
     db.prepare(
-      'INSERT INTO reservations (id, guest_name, phone, party_size, starts_at, note, created_at) ' +
-      'VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT(id) DO NOTHING'
-    ).run(id, name, phone, party, starts, note, new Date().toISOString());
-    row = select.get(id) as ReservationRow | undefined;
-  }
-  if (!row) throw new Error('Reservation could not be read after writing.');
-  if (row.guest_name !== name || row.phone !== phone || row.party_size !== party || row.starts_at !== starts || row.note !== note) {
-    throw new RequestError('This reference belongs to another reservation.', 409);
-  }
-  return reservationReceipt(row);
+      'INSERT INTO reservations (id, guest_name, phone, party_size, starts_at, note, table_number, ends_at, status, created_at) ' +
+      "VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'confirmed', ?)"
+    ).run(id, name, phone, party, starts, note, table.number, ends, new Date().toISOString());
+    return { id, starts_at: starts, party_size: party, status: 'confirmed', table_number: table.number } satisfies ReservationReceipt;
+  });
 }
 
 export function checkReservation(id: unknown) {
-  const row = getDatabase().prepare('SELECT * FROM reservations WHERE id = ?').get(reference(id)) as ReservationRow | undefined;
+  const normalized = typeof id === 'string'
+    ? id.trim().replace(/^PC([a-f0-9]{8})([a-f0-9]{4})([a-f0-9]{4})([a-f0-9]{4})([a-f0-9]{12})$/i, '$1-$2-$3-$4-$5')
+    : id;
+  const row = getDatabase().prepare('SELECT * FROM reservations WHERE id = ?').get(reference(normalized)) as ReservationRow | undefined;
   if (!row) throw new RequestError('Reservation reference not found.', 404);
   return reservationReceipt(row);
 }
@@ -106,25 +154,16 @@ export function staffQueue() {
 }
 
 function confirmReservation(id: string, table: number) {
-  const duration = Number(process.env.CAFE_RESERVATION_MINUTES || 90);
-  if (!Number.isSafeInteger(duration) || duration < 1) throw new Error('Invalid CAFE_RESERVATION_MINUTES.');
-  const db = getDatabase();
-  db.exec('BEGIN IMMEDIATE;');
-  try {
+  reservationTransaction(db => {
     const current = db.prepare("SELECT * FROM reservations WHERE id = ? AND status = 'pending'").get(id) as ReservationRow | undefined;
     if (!current) throw new RequestError('This reservation is no longer pending.', 409);
     if (current.starts_at <= Date.now()) throw new RequestError('This reservation time has already passed.', 409);
-    const end = current.starts_at + duration * 60_000;
-    const conflict = db.prepare(
-      "SELECT id FROM reservations WHERE status = 'confirmed' AND table_number = ? AND starts_at < ? AND ends_at > ?"
-    ).get(table, end, current.starts_at);
-    if (conflict) throw new RequestError('That table already has a booking during this seating.', 409);
+    const end = seatingEnd(current.starts_at);
+    if (reservedTables(db, current.starts_at, end).has(table)) {
+      throw new RequestError('That table already has a booking during this seating.', 409);
+    }
     db.prepare("UPDATE reservations SET status = 'confirmed', table_number = ?, ends_at = ? WHERE id = ?").run(table, end, id);
-    db.exec('COMMIT;');
-  } catch (error) {
-    db.exec('ROLLBACK;');
-    throw error;
-  }
+  });
 }
 
 export function updateStaffQueue(input: Record<string, unknown>) {

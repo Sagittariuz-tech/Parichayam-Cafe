@@ -80,8 +80,26 @@ export function normalizeSearch(value: string) {
 
 const searchIndex = dishes.map(dish => ({
   dish,
+  name: normalizeSearch(dishLabel(dish.name)),
+  original: normalizeSearch(dish.name),
   text: normalizeSearch([dish.name, dishLabel(dish.name), dish.category, categoryLabel(dish.category), dish.description].join(' ')),
 }));
+
+export function suggestDishes(value: string) {
+  const query = normalizeSearch(value);
+  if (!query) return featuredDishes;
+  const tokens = query.split(' ');
+  return searchIndex.flatMap(({ dish, name, original }) => {
+    const words = [...name.split(' '), ...original.split(' ')];
+    if (name === query || original === query) return [{ dish, rank: 0 }];
+    if (name.startsWith(query) || original.startsWith(query)) return [{ dish, rank: 1 }];
+    if (tokens.every(token => words.some(word => word.startsWith(token)))) return [{ dish, rank: 2 }];
+    if (query.length > 1 && (name.includes(query) || original.includes(query))) return [{ dish, rank: 3 }];
+    return [];
+  }).sort((a, b) => a.rank - b.rank || dishLabel(a.dish.name).localeCompare(dishLabel(b.dish.name)))
+    .slice(0, 8)
+    .map(match => match.dish);
+}
 
 export function filterDishes(category: number, diet: Diet, search: string) {
   const terms = normalizeSearch(search).split(' ').filter(Boolean);

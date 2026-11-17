@@ -21,3 +21,8 @@ Private review deployment through Sites.
 - Added unique editorial descriptions and three kitchen note suggestions for every item.
 - Verified the mobile category drawer, uncropped burger photo, QR table prefill, table 15 ordering, quantity bounds, and persisted kitchen notes.
 - Verified menu assets, the production build, TypeScript, and the high-contrast browser tab icon.
+
+## Booking, search, and brand refinement
+- Centered the contained SVG in the header and footer. Styled the main reservation action and added keyboard and touch dish suggestions with exact selection.
+- Verified one confirmed booking per eligible table under concurrent requests, retry idempotency, adjacent time slots, legacy references, and account-free guest confirmation.
+- Verified ID copying, CSV details and spreadsheet escaping, greeting variation, and the 320-pixel layout. The production build, TypeScript, and menu checks passed.

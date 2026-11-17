@@ -10,7 +10,7 @@ src/app owns page and API routes. src/features/menu owns browsing, render logic,
 SQLite persists orders and reservations. Configure a durable local disk in production. A staff passphrase protects the queue and mutations. Guests can check a reservation via its UUID, which returns no guest name, phone or notes.
 
 ## Invariants
-Use the existing snapshot for menu prices and labels. Match media by item ID. A retry keeps the same request ID. Confirm a reservation only after assigning a non-overlapping table. A successful order means it was saved to the kitchen queue.
+Use the existing snapshot for menu prices and labels. Match media by item ID. A retry keeps the same request ID. Assign the first eligible free table and confirm in the same SQLite transaction. Table capacities are configurable in table order. A successful order means it was saved to the kitchen queue.
 
 ## Local development
 Use npm ci, npm run dev and a CAFE_STAFF_PASSWORD in .env.local for staff access. Use npm run menu:verify, npm run build and npm run typecheck for release checks. This release needs a Node host with persistent storage for production service.

@@ -1,11 +1,12 @@
 import { useLayoutEffect, useRef, useState, type FormEvent } from 'react';
-import { cafeDate, cafeTimeZone } from '@/lib/cafe-time';
+import { cafeDate } from '@/lib/cafe-time';
 import { CloseDialog, closeOnBackdrop } from '@/components/modal-controls';
 import { requestJson, useServiceSubmission } from './client';
 import type { ReservationReceipt } from './types';
+import ReservationCard, { reservationCode } from './reservation-card';
 
 const storageKey = 'parichayam-reservation';
-const dateLabel = new Intl.DateTimeFormat('en-IN', { dateStyle: 'medium', timeStyle: 'short', timeZone: cafeTimeZone });
+const detailsKey = 'parichayam-reservation-details';
 
 function lastReference() {
   try { return localStorage.getItem(storageKey) ?? ''; } catch { return ''; }
@@ -16,6 +17,7 @@ export default function ReservationDialog({ open, onClose }: { open: boolean; on
   const title = useRef<HTMLHeadingElement>(null);
   const [mode, setMode] = useState<'request' | 'status'>('request');
   const [receipt, setReceipt] = useState<ReservationReceipt>();
+  const [guestName, setGuestName] = useState('');
   const [statusMessage, setStatusMessage] = useState('');
   const [checking, setChecking] = useState(false);
   const { busy, error, submit, reset } = useServiceSubmission<ReservationReceipt>();
@@ -30,12 +32,17 @@ export default function ReservationDialog({ open, onClose }: { open: boolean; on
   async function reserve(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const fields = new FormData(event.currentTarget);
+    const name = String(fields.get('name') ?? '').trim();
     const result = await submit('/api/reservations', {
-      name: fields.get('name'), phone: fields.get('phone'), partySize: Number(fields.get('party')),
+      name, phone: fields.get('phone'), partySize: Number(fields.get('party')),
       date: fields.get('date'), time: fields.get('time'), note: fields.get('note'),
     });
     if (!result) return;
-    try { localStorage.setItem(storageKey, result.id); } catch {}
+    try {
+      localStorage.setItem(storageKey, reservationCode(result.id));
+      sessionStorage.setItem(detailsKey, JSON.stringify({ id: result.id, name }));
+    } catch {}
+    setGuestName(name);
     setReceipt(result);
   }
 
@@ -45,6 +52,12 @@ export default function ReservationDialog({ open, onClose }: { open: boolean; on
     setStatusMessage('');
     try {
       const result = await requestJson<ReservationReceipt>('/api/reservations?id=' + encodeURIComponent(id));
+      try {
+        const saved = JSON.parse(sessionStorage.getItem(detailsKey) ?? 'null');
+        setGuestName(saved?.id === result.id && typeof saved.name === 'string' ? saved.name : '');
+      } catch {
+        setGuestName('');
+      }
       setReceipt(result);
     } catch (reason) {
       setStatusMessage(reason instanceof Error ? reason.message : 'Could not check this reservation.');
@@ -56,6 +69,7 @@ export default function ReservationDialog({ open, onClose }: { open: boolean; on
   function switchMode(next: typeof mode) {
     setMode(next);
     setReceipt(undefined);
+    setGuestName('');
     setStatusMessage('');
     reset();
   }
@@ -70,17 +84,11 @@ export default function ReservationDialog({ open, onClose }: { open: boolean; on
       </header>
       <div className="service-body">
         {receipt ? <>
-          <p className="service-status" role="status">
-            {receipt.status === 'confirmed' ? 'Confirmed · Table ' + receipt.table_number :
-              receipt.status === 'declined' ? 'The café couldn’t confirm this request' : 'Awaiting café confirmation'}
-          </p>
-          <p>{dateLabel.format(receipt.starts_at)} · Party of {receipt.party_size}</p>
-          <p className="service-note">Save this reference to check your reservation again.</p>
-          <input className="reference-field" aria-label="Reservation reference" value={receipt.id} readOnly onFocus={event => event.target.select()} />
+          <ReservationCard key={receipt.id} receipt={receipt} guestName={guestName} />
           {statusMessage && <p role="alert" className="form-error">{statusMessage}</p>}
-          <button type="button" className="button button-outline" disabled={checking} onClick={() => void check(receipt.id)}>
+          {receipt.status === 'pending' && <button type="button" className="button button-outline" disabled={checking} onClick={() => void check(receipt.id)}>
             {checking ? 'Checking…' : 'Refresh status'}
-          </button>
+          </button>}
         </> : mode === 'status' ? <>
           <form key="status" className="service-form" onSubmit={event => {
             event.preventDefault();
@@ -94,7 +102,7 @@ export default function ReservationDialog({ open, onClose }: { open: boolean; on
           </form>
           <button type="button" className="plain-action" disabled={checking} onClick={() => switchMode('request')}>Make a new reservation</button>
         </> : open && <>
-          <p>Pick a date and time. The café team will confirm your request based on availability.</p>
+          <p>Choose a date and time to book an available table.</p>
           <form key="request" className="service-form" onSubmit={reserve} onChange={reset}>
             <fieldset disabled={busy}>
               <label>Your name<input name="name" autoComplete="name" maxLength={80} required /></label>
@@ -108,7 +116,7 @@ export default function ReservationDialog({ open, onClose }: { open: boolean; on
               </div>
               <label>Anything we should know? <span>(optional)</span><textarea name="note" rows={2} maxLength={240} /></label>
               {error && <p className="form-error" role="alert">{error}</p>}
-              <button className="button button-primary" type="submit">{busy ? 'Sending request…' : 'Request a table'} <span aria-hidden="true">↗</span></button>
+              <button className="button button-primary" type="submit">{busy ? 'Booking your table…' : 'Book my table'} <span aria-hidden="true">↗</span></button>
             </fieldset>
           </form>
           <button type="button" className="plain-action" disabled={busy} onClick={() => switchMode('status')}>Check an existing reservation</button>
@@ -117,5 +125,3 @@ export default function ReservationDialog({ open, onClose }: { open: boolean; on
     </dialog>
   );
 }
-
-

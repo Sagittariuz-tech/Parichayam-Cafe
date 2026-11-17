@@ -3,31 +3,70 @@ import Image from 'next/image';
 import { greetingPeriod } from '@/lib/cafe-time';
 
 const portraits = [
-  { image: 'waiter', role: 'Your waiter', title: 'You’ve got good taste!', line: (dish: string) => 'I’ve put ' + dish + ' in our kitchen queue for you.' },
-  { image: 'chef', role: 'The café chef', title: 'That’s a lovely pick.', line: (dish: string) => dish + ' is on the kitchen list. Thanks for letting us cook for you.' },
-  { image: 'barista', role: 'Behind the coffee bar', title: 'Excellent choice!', line: (dish: string) => 'Your ' + dish + ' is on the team’s list. Make yourself comfortable.' },
-  { image: 'baker', role: 'From the café kitchen', title: 'You know the good stuff.', line: (dish: string) => 'We’ve got your order for ' + dish + '. Hope it makes your day a little sweeter.' },
-  { image: 'head-chef', role: 'The head chef', title: 'Now that’s an order I like.', line: (dish: string) => 'The kitchen has ' + dish + ' in its queue. Take a moment to enjoy the company at your table.' },
-  { image: 'host', role: 'Your café host', title: 'A wonderful choice.', line: (dish: string) => 'I’ve sent ' + dish + ' to our café team’s queue. I’m glad you’re here.' },
+  { image: 'waiter', role: 'Your waiter' },
+  { image: 'chef', role: 'The café chef' },
+  { image: 'barista', role: 'Behind the coffee bar' },
+  { image: 'baker', role: 'From the café kitchen' },
+  { image: 'head-chef', role: 'The head chef' },
+  { image: 'host', role: 'Your café host' },
 ];
 
-let lastCharacter = -1;
+const welcomes = [
+  'Welcome to Parichayam. Take a seat and make yourself at home.',
+  'Come on in. There’s always room for a good bite and a long chat.',
+  'Lovely to see you. Have a look around the menu and take your time.',
+  'Glad you found us. What sounds good today?',
+  'Pull up a chair. A little café time looks good on you.',
+  'You picked a good moment to stop by. Take your time and find something you love.',
+  'Hello from the Parichayam team. We’re glad you’re at our table.',
+  'A warm welcome from all of us. We hope you find a new favourite today.',
+  'Settle in. The coffee can be quick, but the conversation can take its time.',
+  'Welcome! The menu is yours to explore, from the first sip to the last bite.',
+  'Come in hungry or just curious. Either way, we’re happy to see you.',
+  'It’s good to have you here. Take a look and see what catches your eye.',
+];
 
-export function nextCharacter() {
-  lastCharacter = lastCharacter < 0
-    ? Math.floor(Math.random() * portraits.length)
-    : (lastCharacter + 1) % portraits.length;
-  return lastCharacter;
+const orderLines = [
+  { title: 'You’ve got good taste!', line: (dish: string) => 'I’ve put ' + dish + ' in the kitchen queue for you.' },
+  { title: 'That’s a lovely pick.', line: (dish: string) => dish + ' is on the kitchen list. Thanks for letting us cook for you.' },
+  { title: 'Glad you chose that one.', line: (dish: string) => 'Your order for ' + dish + ' is in. Get comfortable while the team takes it from here.' },
+  { title: 'A very good call.', line: (dish: string) => 'We’ve got your order for ' + dish + '. I hope the first bite makes you smile.' },
+  { title: 'I like your style.', line: (dish: string) => 'We’ve added ' + dish + ' to the team’s queue. Take a moment to enjoy the table.' },
+  { title: 'That’s a keeper.', line: (dish: string) => 'Your ' + dish + ' has joined the kitchen queue. Glad you’re here to try it.' },
+  { title: 'Well chosen.', line: (dish: string) => 'I’ve sent ' + dish + ' to the café queue. There’s nothing more you need to do for now.' },
+  { title: 'You knew what you wanted.', line: (dish: string) => 'We’ve received your order for ' + dish + '. Let the conversation carry on while we take it from here.' },
+  { title: 'A fine choice for your table.', line: (dish: string) => dish + ' is on our list. It’s a pleasure to have you with us.' },
+  { title: 'Excellent pick.', line: (dish: string) => 'The café queue has your ' + dish + '. I hope it turns out to be just what you were craving.' },
+  { title: 'Good eye.', line: (dish: string) => 'We’ve saved your order for ' + dish + '. Thanks for spending a little time with us.' },
+  { title: 'That sounds good already.', line: (dish: string) => 'I’ve sent ' + dish + ' to the kitchen queue. Make yourself at home while the team takes a look.' },
+];
+
+function randomIndex(key: string, length: number) {
+  let previous = -1;
+  try { previous = Number(sessionStorage.getItem(key) ?? '-1'); } catch {}
+  const excludePrevious = Number.isInteger(previous) && previous >= 0 && previous < length;
+  let index = Math.floor(Math.random() * (length - Number(excludePrevious)));
+  if (excludePrevious && index >= previous) index++;
+  try { sessionStorage.setItem(key, String(index)); } catch {}
+  return index;
 }
 
-export function OrderCharacter({ character, dish }: { character: number; dish: string }) {
-  const person = portraits[character];
+export function nextOrderGreeting() {
+  return {
+    portrait: randomIndex('parichayam-last-portrait', portraits.length),
+    message: randomIndex('parichayam-last-order-message', orderLines.length),
+  };
+}
+
+export function OrderCharacter({ greeting, dish }: { greeting: ReturnType<typeof nextOrderGreeting>; dish: string }) {
+  const person = portraits[greeting.portrait];
+  const message = orderLines[greeting.message];
   return (
     <>
       <Image className="receipt-portrait" src={'/staff/' + person.image + '.webp'} alt="" width={190} height={190} unoptimized />
       <p className="eyebrow">{person.role}</p>
-      <h2 id="dish-title" tabIndex={-1}>{person.title}</h2>
-      <p>{person.line(dish)} Have a wonderful {greetingPeriod()}.</p>
+      <h2 id="dish-title" tabIndex={-1}>{message.title}</h2>
+      <p>{message.line(dish)} Have a wonderful {greetingPeriod()}.</p>
     </>
   );
 }
@@ -35,12 +74,10 @@ export function OrderCharacter({ character, dish }: { character: number; dish: s
 export function CafeWelcome() {
   const [message, setMessage] = useState('');
   useEffect(() => {
-    let seen = false;
-    try { seen = sessionStorage.getItem('parichayam-welcome') === 'shown'; } catch {}
-    if (seen) return;
     const timer = window.setTimeout(() => {
-      setMessage('Good ' + (greetingPeriod() === 'night' ? 'evening' : greetingPeriod()) + '! Welcome to Parichayam. We’re glad you’re here.');
-      try { sessionStorage.setItem('parichayam-welcome', 'shown'); } catch {}
+      const period = greetingPeriod();
+      const line = welcomes[randomIndex('parichayam-last-welcome', welcomes.length)];
+      setMessage('Good ' + (period === 'night' ? 'evening' : period) + '! ' + line);
     }, 1450);
     return () => window.clearTimeout(timer);
   }, []);
@@ -54,4 +91,3 @@ export function CafeWelcome() {
     </aside>
   );
 }
-

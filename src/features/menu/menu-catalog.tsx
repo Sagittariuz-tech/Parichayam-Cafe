@@ -1,7 +1,8 @@
 import { useLayoutEffect, useMemo, useRef, useState } from 'react';
-import { categories, categoryLabel, dietaryLabels, dishes, filterDishes, quickCategories, type Diet, type Dish } from './menu';
+import { categories, categoryLabel, dietaryLabels, dishes, dishLabel, filterDishes, quickCategories, type Diet, type Dish } from './menu';
 import { CategoryButtons } from './category-buttons';
 import DishCard from './dish-card';
+import DishSearch from './dish-search';
 import { RevealWords } from './reveal-words';
 import CategoryDrawer from './category-drawer';
 
@@ -15,6 +16,7 @@ export default function MenuCatalog({ onSelectDish, scrollTo }: {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [diet, setDiet] = useState<Diet>('');
   const [search, setSearch] = useState('');
+  const [selectedDish, setSelectedDish] = useState<Dish | null>(null);
   const [limit, setLimit] = useState(pageSize);
   const toolbar = useRef<HTMLDivElement>(null);
   const searchInput = useRef<HTMLInputElement>(null);
@@ -24,7 +26,7 @@ export default function MenuCatalog({ onSelectDish, scrollTo }: {
   const focusIndex = useRef<number | null>(null);
 
   const category = categories.find(item => item.id === categoryId);
-  const matching = useMemo(() => filterDishes(categoryId, diet, search), [categoryId, diet, search]);
+  const matching = useMemo(() => selectedDish ? [selectedDish] : filterDishes(categoryId, diet, search), [categoryId, diet, search, selectedDish]);
   const visible = matching.slice(0, limit);
   const countLabel = visible.length === matching.length
     ? matching.length + (matching.length === 1 ? ' result' : ' results')
@@ -38,16 +40,32 @@ export default function MenuCatalog({ onSelectDish, scrollTo }: {
 
   function changeCategory(id: number) {
     categoryDialog.current?.close();
+    if (selectedDish) setSearch('');
+    setSelectedDish(null);
     setCategoryId(id);
     setLimit(pageSize);
+    scrollToResults();
+  }
 
+  function scrollToResults() {
     if (!toolbar.current || !resultsStart.current) return;
     const pinned = getComputedStyle(toolbar.current).position === 'sticky' ? toolbar.current.offsetHeight : 0;
     scrollTo(resultsStart.current, -14 - pinned);
   }
 
+  function selectDish(dish: Dish) {
+    setSelectedDish(dish);
+    setSearch(dishLabel(dish.name));
+    setCategoryId(0);
+    setDiet('');
+    setLimit(pageSize);
+    resultsStart.current?.querySelector('h3')?.focus({ preventScroll: true });
+    scrollToResults();
+  }
+
   function clearFilters() {
     setSearch('');
+    setSelectedDish(null);
     setDiet('');
     setCategoryId(0);
     setLimit(pageSize);
@@ -66,12 +84,11 @@ export default function MenuCatalog({ onSelectDish, scrollTo }: {
         </header>
         <div className="catalog-toolbar" ref={toolbar}>
           <div className="controls">
-            <div className="search">
-              <span className="search-icon" aria-hidden="true" />
-              <label className="sr-only" htmlFor="dish-search">Search dishes or categories</label>
-              <input ref={searchInput} id="dish-search" type="search" placeholder="Search dishes or categories" autoComplete="off"
-                value={search} onChange={event => { setSearch(event.target.value); setLimit(pageSize); }} />
-            </div>
+            <DishSearch inputRef={searchInput} value={search} onSelect={selectDish} onChange={value => {
+              setSelectedDish(null);
+              setSearch(value);
+              setLimit(pageSize);
+            }} />
             <button type="button" className="button button-outline category-toggle" aria-haspopup="dialog"
               aria-controls="category-dialog" onClick={() => setDrawerOpen(true)}>
               Categories <span aria-hidden="true">≡</span>
@@ -87,13 +104,15 @@ export default function MenuCatalog({ onSelectDish, scrollTo }: {
           </nav>
           <div className="catalog-result" ref={resultsStart}>
             <div className="results-heading">
-              <h3>{category ? categoryLabel(category.name) : 'All dishes'}</h3>
+              <h3 tabIndex={-1}>{selectedDish ? 'Selected dish' : category ? categoryLabel(category.name) : 'All dishes'}</h3>
               <div className="diet-control">
+                {selectedDish ? <button type="button" className="plain-action" onClick={clearFilters}>Clear selection</button> : <>
                 <label className="sr-only" htmlFor="diet">Dietary filter</label>
                 <select id="diet" value={diet} onChange={event => { setDiet(event.target.value as Diet); setLimit(pageSize); }}>
                   <option value="">All diets</option>
                   {Object.entries(dietaryLabels).map(([value, label]) => <option key={value} value={value}>{label}</option>)}
                 </select>
+                </>}
               </div>
             </div>
             <p className="results-count" role="status">{countLabel}</p>

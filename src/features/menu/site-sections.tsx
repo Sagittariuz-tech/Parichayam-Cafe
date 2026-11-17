@@ -24,7 +24,7 @@ export function SiteHeader({ onReserve }: ReserveProps) {
         <nav aria-label="Main navigation">
           <a className="nav-link" href="#highlights">Highlights</a>
           <a className="nav-link" href="#menu">Menu</a>
-          <button className="button button-outline" type="button" aria-haspopup="dialog" onClick={onReserve}>Reserve a table <span aria-hidden="true">↗</span></button>
+          <button className="button button-reserve" type="button" aria-haspopup="dialog" onClick={onReserve}>Reserve a table <span className="reserve-arrow" aria-hidden="true">↗</span></button>
         </nav>
       </header>
     </>
