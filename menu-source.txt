@@ -1,0 +1,296 @@
+# Sandwiches
+Cheese Sandwich|V|189
+Chicken Sandwich|N|249
+Chicken Tikka Sandwich|N|249
+Grilled Chicken Sandwich|N|249
+Peri Peri Grilled Chicken Sandwich|N|249
+Smokey Paneer Sandwich|V|249
+Veg Sandwich|V|179
+# Burgers
+Aloo Tikki Burger|V|169
+Chicken Crunchy Burger|N|249
+Maha Raja Burger|N|299
+Paneer Burger|V|229
+Spicy Crunchy Burger|N|249
+Veg Burger|V|199
+# Pasta
+Alfredo Pasta (Non-Veg)|N|389
+Alfredo Pasta (Veg)|V|329
+Alio Olio Pasta (Non-Veg)|N|389
+Alio Olio Pasta (Veg)|V|329
+Arrabbiata Pasta (Non-Veg)|N|389
+Arrabbiata Pasta (Veg)|V|329
+Pink Sauce Pasta (Non-Veg)|N|389
+Pink Sauce Pasta (Veg)|V|329
+SPAGHETTI ALFREDO NON-VEG|N|389
+SPAGHETTI ALFREDO VEG|V|328
+SPAGHETTI ARRABBIATA VEG|V|329
+SPAGHETTI ARRABITTA NON-VEG|N|389
+SPAGHETTI PINK SAUCE PASTA NON-VEG|N|389
+SPAGHETTI PINK SAUCE PASTA VEG|V|329
+# hot coffees
+Cafe Latte||from149
+Choco Mocha||from169
+Classic Americano||from129
+Double Shot Espresso||149
+Flat White||179
+Silky Cappuccino||from149
+Single Shot Espresso||99
+# Choco Based Hot Drinks
+Belgian Chocolate Indulgence||from189
+Rich Hot Chocolate||from179
+# Parichayam Specials
+Biscoff Affogato||249
+Classic Affogato||229
+Sunrise by the Shore||209
+Sunset over the Harbour||229
+# Hot Teas
+Blue Tea||109
+Calming Chamomile||109
+Hibiscus Bloom||109
+Lemon Tea||109
+Minty Green Brew||109
+Pure Green Leaf||109
+# Brewing Pots
+Green Mint Tea Jar||from149
+Lemon Tea Jar||from149
+Slow Brewed Green Tea Jar||from149
+# Other Beverages
+cranberry cold brew||229
+DIET COKE||79
+extra chocolate||49
+Fresh Lime Soda (Salt)||99
+Fresh Lime Soda (Sweet)||99
+fresh lime sweet&salt||99
+Monster (Tin)||149
+Sprite||59
+Thums Up||59
+Water Bottle 1 Ltr||40
+water bottle 750ml||30
+# Layered Macchiato
+Caramel Macchiato||189
+Cinnamon Macchiato||189
+Hazelnut Macchiato||189
+Irish Cream Macchiato||189
+Latte Macchiato||189
+Vanilla Macchiato||189
+# Iced Matcha Bloom
+Blueberry Matcha||299
+Classic Matcha||299
+MANGO MATCHA|N|299
+Strawberry Matcha||299
+# Desserts
+BELGIAN CHOCOLATE ICE CREAM||149
+Brownie||119
+Brownie with Chocolate||149
+Brownie with Ice Cream||229
+BUTTERSCOTCH ICE CREAM||149
+CARAMEL NUT ICE CREAM||149
+CHACO LAVA WITH ICE CREAM||199
+CHOCOLATE BROWNIE ICE CREAM||149
+Choco Lava||99
+extra ice cream||60
+FRUIT OVERLOAD ICE CREAM||149
+KITKAT WITH ICE CREAM||300
+MANGO ICE CREAM||149
+PISTA ICE CREAM||149
+STRAWBERRY ICE CREAM||149
+VENNILA ICE CREAM|V|129
+# Combos
+Chicken Lovers Combo|N|999|Creamy chicken rice bowl, chicken delight pizza, chicken wings (6 pcs), peri peri fries, two soft drinks
+Friends Combo|N|999|Peri peri chicken rice bowl, chicken crunchy burger, chicken 65, peri peri fries, two soft drinks
+Parichayam Signature Combo|N|999|Parichayam conti signature rice bowl, parichayam harbour pizza, peri peri fries, tropical sunrise mojito
+Tandoori Feast Combo|N|999|Tandoori chicken rice bowl, chicken supreme pizza, cheese loaded fries, classic virgin mojito
+Veg Feast Combo|V|999|Any one veg soup (Tomato / Sweet Corn / Manchow / Hot & Sour), creamy paneer rice bowl, paneer tikka pizza, cheese loaded fries, classic virgin mojito
+# COFFEE FLAVOURS
+Caramel Shot||39
+CINNAMON FLAVOUR||39
+Hazelnut Shot||39
+Honey Dip||15|Add-on for hot teas
+Irish Cream Shot||39
+Vanilla Shot||39
+# Iced Coffee Bar
+cinnamon cold brew||199
+Cold Brew||189
+ESPRESSO BOMB||189|DOUBLE ESPRESSO+SODA+LEMON+SALT
+Espresso Tonic||189
+ESPRESSO TONIC BOMB||229|espresso+tonic water+lemon+salt
+Iced Americano||189
+ICED LATTE||189
+Iced Mocha||189
+Spanish Latte||189
+Vietnamese Iced Coffee||189
+# Chilled Ice Teas
+Blueberry Ice Tea||139
+Blue Caracao Ice Tea||139
+Classic Lemon Ice Tea||139
+Orange Ice Tea||139
+Peach Ice Tea||139
+Strawberry Ice Tea||139
+Watermelon Ice Tea||139
+# Frosted Frappe
+Caramel Frappe||199
+Coffee Frappe||199
+Hazelnut Frappe||199
+Mocha Frappe||199
+Vanilla Frappe||199
+# Thick Shake Bar
+Biscoff Shake||249
+Blueberry Fusion Shake||189
+Brownie Shake||249
+Chocolate Shake||189
+Classic Vanilla Shake||199
+KitKat Shake||219
+Mango Shake||189
+mixed berry thickshek|V|247
+nutella thick shake||249
+Oreo Shake||219
+PEANUT BUTTER THICKSHAKE||249
+Strawberry Shake||189
+# Virgin Mojito Bar
+Blueberry Mojito||169
+Blue Caracao Mojito||169
+Classic Virgin Mojito||169
+Strawberry Mojito||169
+Tropical Sunrise Mojito||199
+Watermelon Mojito||169
+# Soups
+CHICKEN HOT&SOUR  1/2||185
+Hot & Sour Soup (Non-Veg)|N|169
+Hot & Sour Soup (Veg)|V|129
+Lemon Coriander Soup (Non-Veg)|N|169
+Lemon Coriander Soup (Veg)|V|129
+LEMON COURIANDER CHICKEN 1/2||179
+LEMON COURIANDER SOUP VEG 1/2||139
+MANCHOW SOUP CHICKEN 1/2||189
+Manchow Soup (Non-Veg)|N|169
+Manchow Soup (Veg)|V|129
+MANCHOW SOUP VEG 1/2|V|139
+sweetcorn soup (nonveg)|N|169
+sweetcorn soup (nonveg) 1/2|N|189
+sweetcorn soup veg|V|129
+sweetcorn soup veg 1/2|V|139
+VEG HOT&SOUR SOUP 1/2||139
+# Chinese Starters
+APOLLO FISH|N|349
+cashew paneer||349
+CHICKEN 555||349
+Chicken 65|N|289
+chicken majestic||349
+Chicken Manchurian (Dry)|N|289
+Chicken Manchurian (Gravy)|N|289
+CHICKEN PAKODA||299
+CHILLI CHICKEN DRY||289
+chilli chicken (WET)||299
+CHILLI FISH|N|349
+Chilli Mushroom|V|249
+Chilli Paneer|V|319
+Chilli Prawns|N|399
+CRISPY BABY CORN||299
+Crispy Chicken|N|299
+crispy corn||200
+Dragon Chicken|N|299
+FISH 65|N|349
+garlic chicken||299
+ghee roast chicken||349
+Gobi 65|V|199
+Honey chicken|N|349
+kaju chicken||349
+Loose Prawns|N|389
+Maharaja chicken|N|349
+Mushroom 65|V|249
+Paneer Majestic|V|319
+PANNER 65||299
+Parichayam's Chinese Signature Dish|N|399
+Pepper Chicken|N|349
+PRAWN PAKODA|N|349
+Rr chicken|N|349
+Sesame Chicken|N|349
+Veg Manchurian|V|199
+# Continental Starters
+Cheese Fries|V|199
+Chicken Lolli Pops (6 pcs)|N|299
+Chicken Nuggets|N|289
+Chicken Popcorn|N|289
+Chicken Spring Rolls|N|289
+Chicken Strips (6 pcs)|N|289
+Chicken Wings (6 pcs)|N|259
+chicken with loaded fries|N|299
+extra cheese||60
+Fish Strips|N|349
+Fried Anchovies|N|399
+Hash Browns (3 pcs)|V|199
+Honey Chilli Potato Bites|V|249
+honey wings|N|299
+KFC Prawns|N|399
+Parichayam Conti Signature|N|399
+Peri Peri Fries|V|149
+Salted Fries|V|129
+Veg Spring Rolls|V|249
+Veg Strips|V|249
+# Breads
+Chilli Garlic Bread (4 pcs)|V|159
+Exotic Garlic Bread (4 pcs)|V|199
+Garlic Toast Bread (4 pcs)|V|129
+# Chinese Main Course
+Chicken Fried Rice|N|299
+Egg Fried Rice|N|249
+Mixed Fried Rice|N|349
+Mushroom Fried Rice|V|299
+Paneer Fried Rice|V|299
+Schezwan Chicken Fried Rice|N|329
+SCHEZWAN EGG FIREDRICE||279
+Schezwan Veg Fried Rice|V|249
+veg friedrice|V|250
+# Noodles
+Chicken Noodles|N|239
+Egg Noodles|N|199
+SCHEZWAN EGG NOODLES|E|229
+Schezwan Firecracker Noodles (Chicken)|N|269
+Schezwan Firecracker Noodles (Veg)|V|199
+Veg Noodles|V|169
+# Maggie's
+Cheese Maggie|V|179
+Chicken Maggie|N|199
+Egg Maggie|N|159
+Veg Maggie|V|129
+# Rice Bowls
+Creamy Chicken Rice Bowl|N|399
+Creamy Paneer Rice Bowl|V|349
+Dal Makhani Rice Bowl|V|299
+EXTRA CHICKEN 250 GRAMS|N|169
+Fish Rice Bowl|N|399
+GRILL CHICKEN WITH STEAMED VEGGIES|N|399|GRILL CHICKEN 130 GRAMS AFTER COOKED AND 160 GRAMS VEGGIES
+Paneer Rice Bowl|V|349
+PANNER WITH STEAMED VEGGIES|V|367|110 GRAMS PANNER AND 160 GRAMS STEAMED VEGGIES
+Parichayam Conti Signature Rice Bowl|N|399
+Peri Peri Chicken Rice Bowl|N|399
+Peri Peri Paneer Rice Bowl|V|349
+plain rice bowl||249
+Tandoori Chicken Rice Bowl|N|399
+# Pizza
+bbq non-veg pizza||350
+Chicken Delight Pizza|N|329|Onion, bell peppers, cheese, chicken
+Chicken Kheema Pizza|N|379|Onion, bell peppers, kheema, cheese
+Chicken Maharaja Pizza|N|369|Chicken, jalapeno, onion, bell peppers, cheese, sweet corn
+Chicken Supreme Pizza|N|349
+CHICKEN TIKKA PIZZA|N|369
+Classic Margherita|V|249|Cheese
+Farmhouse Harvest Pizza|V|289|Onion, bell peppers, mushroom, cheese, tomato
+Golden Corn Pizza|V|269|Onion, cheese, bell peppers, corn
+Paneer Tikka Pizza|V|329|Onion, cheese, tikka paneer
+Parichayam Harbour Pizza|N|399|Onion, bell peppers, chicken, prawns, cheese
+PERIPERI CHICKEN PIZZA||349
+Veg Delight Pizza|V|269|Onion, cheese, bell peppers, tomato
+Veg Supreme Pizza|V|289|Onion, bell peppers, cheese, black olives, tomato
+# MEXICAN STATERS
+PANEER QUESADILLA|V|299
+QUESADILLA CHICKEN|N|349
+# Others
+EXTRA EGG||50
+extra milk||60
+MONSTER TIN WHITE||149
+sweet corn add  on|V|50
+takeaway||10
+TAKE AWAY||20
+takeawy||30
