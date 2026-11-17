@@ -26,3 +26,7 @@ Private review deployment through Sites.
 - Centered the contained SVG in the header and footer. Styled the main reservation action and added keyboard and touch dish suggestions with exact selection.
 - Verified one confirmed booking per eligible table under concurrent requests, retry idempotency, adjacent time slots, legacy references, and account-free guest confirmation.
 - Verified ID copying, CSV details and spreadsheet escaping, greeting variation, and the 320-pixel layout. The production build, TypeScript, and menu checks passed.
+
+## Order write recovery
+- Reproduced the order failure with an isolated SQLite write lock. Added a bounded retry for busy or locked writes and kept the original order reference.
+- Verified the Cheese Sandwich order, a lock that clears, a persistent lock, and duplicate prevention on replay. Refreshed the local production preview.

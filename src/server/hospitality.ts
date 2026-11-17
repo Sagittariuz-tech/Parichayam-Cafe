@@ -27,12 +27,14 @@ export function submitOrder(input: Record<string, unknown>) {
   const note = textField(input.note, orderNoteLimit, 'Order note');
   const db = getDatabase();
 
-  db.prepare(
+  const findOrder = db.prepare('SELECT * FROM orders WHERE id = ?');
+  const stored = findOrder.get(id) as OrderRow | undefined;
+  // The unique reference also handles a concurrent retry that inserts after this read.
+  const inserted = stored ? undefined : db.prepare(
     'INSERT INTO orders (id, dish_id, dish, table_number, unit_price, starting_price, quantity, note, created_at) ' +
-    'VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT(id) DO NOTHING'
-  ).run(id, dish.id, dishLabel(dish.name), table, Number(dish.price.replace(/^from/, '')), Number(dish.price.startsWith('from')), quantity, note, new Date().toISOString());
-
-  const row = db.prepare('SELECT * FROM orders WHERE id = ?').get(id) as OrderRow | undefined;
+    'VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT(id) DO NOTHING RETURNING *'
+  ).get(id, dish.id, dishLabel(dish.name), table, Number(dish.price.replace(/^from/, '')), Number(dish.price.startsWith('from')), quantity, note, new Date().toISOString()) as OrderRow | undefined;
+  const row = stored ?? inserted ?? findOrder.get(id) as OrderRow | undefined;
   if (!row) throw new Error('Order could not be read after writing.');
   if (row.dish_id !== dish.id || row.table_number !== table || row.quantity !== quantity || row.note !== note) {
     throw new RequestError('This order reference belongs to another order.', 409);
