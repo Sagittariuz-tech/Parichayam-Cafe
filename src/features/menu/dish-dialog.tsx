@@ -198,8 +198,9 @@ export default function DishDialog({ dish, onClose }: { dish: Dish | null; onClo
       onClose={() => { setConfirmation(null); onClose(); }}>
       <CloseDialog label="Close dish details" floating disabled={busy} />
       {confirmation ? <div className="receipt-pane" ref={receiptTitle}>
-        <OrderCharacter greeting={confirmation.greeting} dish={confirmation.receipt.dish} />
-        <p className="receipt-meta">Table {confirmation.receipt.table_number} · Qty {confirmation.receipt.quantity} · Order {confirmation.receipt.id.slice(0, 8).toUpperCase()}</p>
+        <OrderCharacter greeting={confirmation.greeting} dish={confirmation.receipt.dish} demo={confirmation.receipt.status === 'demo'} />
+        {confirmation.receipt.status === 'demo' && <p className="service-note" role="status">Demo order — not sent to the kitchen. Please order with the cafe team during your visit.</p>}
+        <p className="receipt-meta">Table {confirmation.receipt.table_number} · Qty {confirmation.receipt.quantity} · {confirmation.receipt.status === 'demo' ? 'Preview' : 'Order'} {confirmation.receipt.id.slice(0, 8).toUpperCase()}</p>
         <form method="dialog"><button className="button button-primary" type="submit">Back to the menu</button></form>
       </div> : dish && <DishOrder key={dish.id} dish={dish} onBusy={setBusy}
         onReceipt={receipt => setConfirmation({ receipt, greeting: nextOrderGreeting() })} />}

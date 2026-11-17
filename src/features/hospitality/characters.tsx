@@ -41,6 +41,15 @@ const orderLines = [
   { title: 'That sounds good already.', line: (dish: string) => 'I’ve sent ' + dish + ' to the kitchen queue. Make yourself at home while the team takes a look.' },
 ];
 
+const demoOrderLines = [
+  (dish: string) => dish + ' is a lovely choice. Here is a little preview of your table order.',
+  (dish: string) => 'A little daydream of ' + dish + '. Your preview is ready, and your taste is impeccable.',
+  (dish: string) => 'Your preview of ' + dish + ' is ready. That sounds like the start of a delicious visit.',
+  (dish: string) => dish + ' has caught your eye. We love a guest who follows their appetite.',
+  (dish: string) => 'Imagine the first bite of ' + dish + '. A fine choice for a little cafe time.',
+  (dish: string) => 'A preview of ' + dish + ', chosen with excellent taste. Come hungry when you visit.',
+];
+
 function randomIndex(key: string, length: number) {
   let previous = -1;
   try { previous = Number(sessionStorage.getItem(key) ?? '-1'); } catch {}
@@ -58,7 +67,7 @@ export function nextOrderGreeting() {
   };
 }
 
-export function OrderCharacter({ greeting, dish }: { greeting: ReturnType<typeof nextOrderGreeting>; dish: string }) {
+export function OrderCharacter({ greeting, dish, demo = false }: { greeting: ReturnType<typeof nextOrderGreeting>; dish: string; demo?: boolean }) {
   const person = portraits[greeting.portrait];
   const message = orderLines[greeting.message];
   return (
@@ -66,7 +75,7 @@ export function OrderCharacter({ greeting, dish }: { greeting: ReturnType<typeof
       <Image className="receipt-portrait" src={'/staff/' + person.image + '.webp'} alt="" width={190} height={190} unoptimized />
       <p className="eyebrow">{person.role}</p>
       <h2 id="dish-title" tabIndex={-1}>{message.title}</h2>
-      <p>{message.line(dish)} Have a wonderful {greetingPeriod()}.</p>
+      <p>{demo ? demoOrderLines[greeting.message % demoOrderLines.length](dish) : message.line(dish)} Have a wonderful {greetingPeriod()}.</p>
     </>
   );
 }

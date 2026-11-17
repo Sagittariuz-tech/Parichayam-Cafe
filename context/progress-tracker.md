@@ -30,3 +30,8 @@ Private review deployment through Sites.
 ## Order write recovery
 - Reproduced the order failure with an isolated SQLite write lock. Added a bounded retry for busy or locked writes and kept the original order reference.
 - Verified the Cheese Sandwich order, a lock that clears, a persistent lock, and duplicate prevention on replay. Refreshed the local production preview.
+
+## Vercel order preview
+- Identified local SQLite persistence as incompatible with Vercel serverless hosting. The user deferred database integration and requested a message-only order preview.
+- Added default database-free demo receipts with varied character messages and explicit disclosure that no ticket reached the kitchen. Live mode remains opt-in and never silently falls back to demo.
+- Verified the production API with VERCEL=1 and an unusable database path: Chicken Sandwich success, stable reference replay, seven validation failures, and live failure without a false receipt. Production build, TypeScript, and all 266 menu records passed. No Vercel deployment was performed.

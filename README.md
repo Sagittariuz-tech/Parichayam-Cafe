@@ -11,6 +11,14 @@ Use Node.js 24 or later.
 
 Open http://localhost:3000. Copy .env.example to .env.local and set CAFE_STAFF_PASSWORD to a strong passphrase before opening http://localhost:3000/staff. Restart Next.js when changing environment values.
 
+## Order preview mode
+
+Orders default to demo mode, including on Vercel. The Send order button validates the dish, table, quantity and note, then returns an animated preview without accessing SQLite. The receipt explicitly says it was not sent to the kitchen. No database credentials or guest authentication are needed for this preview.
+
+Set CAFE_ORDER_MODE=live only when real persistent storage is available. Live failures remain failures and never become demo successes. The existing live SQLite backend requires a durable Node host; connecting a hosted database for Vercel is future work. Reservations and the staff desk still require the database. Do not set CAFE_DB_PATH to /tmp on Vercel to simulate persistence.
+
+Deploy the updated source to Vercel using the Next.js preset and Node 24. No additional environment variable is required for demo orders. If CAFE_ORDER_MODE is already set to live, change it to demo and redeploy.
+
 ## Café workflow
 
 - Put the table number in each table QR URL, such as /?table=4. Guests can also choose from tables 1 through 15 when ordering.

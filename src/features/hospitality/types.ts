@@ -3,7 +3,7 @@ export interface OrderReceipt {
   dish: string;
   table_number: number;
   quantity: number;
-  status: 'queued' | 'preparing' | 'served' | 'cancelled';
+  status: 'demo' | 'queued' | 'preparing' | 'served' | 'cancelled';
 }
 
 export interface ReservationReceipt {
@@ -14,7 +14,8 @@ export interface ReservationReceipt {
   table_number: number | null;
 }
 
-export interface StaffOrder extends OrderReceipt {
+export interface StaffOrder extends Omit<OrderReceipt, 'status'> {
+  status: Exclude<OrderReceipt['status'], 'demo'>;
   note: string;
   unit_price: number;
   starting_price: number;

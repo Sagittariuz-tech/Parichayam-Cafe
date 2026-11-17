@@ -25,6 +25,11 @@ export function submitOrder(input: Record<string, unknown>) {
   const table = count(input.table, tableCount, 'Table number');
   const quantity = count(input.quantity, orderQuantityLimit, 'Quantity');
   const note = textField(input.note, orderNoteLimit, 'Order note');
+  // Demo is the default until a durable production database is connected.
+  // Never fall back to demo after an actual live-order failure.
+  if (process.env.CAFE_ORDER_MODE !== 'live') {
+    return { id, dish: dishLabel(dish.name), table_number: table, quantity, status: 'demo' } satisfies OrderReceipt;
+  }
   const db = getDatabase();
 
   const findOrder = db.prepare('SELECT * FROM orders WHERE id = ?');

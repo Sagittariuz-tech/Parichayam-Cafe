@@ -14,3 +14,6 @@ Use the existing snapshot for menu prices and labels. Match media by item ID. A 
 
 ## Local development
 Use npm ci, npm run dev and a CAFE_STAFF_PASSWORD in .env.local for staff access. Use npm run menu:verify, npm run build and npm run typecheck for release checks. This release needs a Node host with persistent storage for production service.
+
+## Database-free order preview
+Orders default to demo mode. Validation runs on the server, but demo receipts do not read or write SQLite and explicitly disclose that nothing was sent to the kitchen. CAFE_ORDER_MODE=live enables the original persistent ordering flow. Hosted database integration for Vercel is deferred by the user.
