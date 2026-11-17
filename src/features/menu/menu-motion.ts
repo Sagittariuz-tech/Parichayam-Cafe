@@ -3,7 +3,9 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from 'lenis';
 
-const motionPreference = '(prefers-reduced-motion: reduce)';
+export function prefersReducedMotion() {
+  return matchMedia('(prefers-reduced-motion: reduce)').matches;
+}
 
 export function useMenuMotion() {
   const engine = useRef<Lenis | null>(null);
@@ -45,12 +47,12 @@ export function useMenuMotion() {
   return (target: HTMLElement, offset = 0) => {
     const top = Math.max(0, window.scrollY + target.getBoundingClientRect().top + offset);
     if (engine.current) engine.current.scrollTo(top, { duration: 0.95 });
-    else window.scrollTo({ top, behavior: matchMedia(motionPreference).matches ? 'instant' : 'smooth' });
+    else window.scrollTo({ top, behavior: prefersReducedMotion() ? 'instant' : 'smooth' });
   };
 }
 
 export function animateDishDialog(dialog: HTMLDialogElement) {
-  if (matchMedia(motionPreference).matches) return;
+  if (prefersReducedMotion()) return;
   gsap.fromTo(dialog, { opacity: 0, y: 12 }, {
     opacity: 1, y: 0, duration: 0.28, ease: 'power2.out', clearProps: 'opacity,transform', overwrite: true,
   });

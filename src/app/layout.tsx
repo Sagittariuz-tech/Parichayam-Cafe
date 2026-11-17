@@ -3,6 +3,7 @@ import localFont from 'next/font/local';
 import type { ReactNode } from 'react';
 import './globals.css';
 import '@/features/hospitality/hospitality.css';
+import '@/features/menu/menu-dialogs.css';
 
 const bodyFont = localFont({
   src: '../../public/fonts/dm-sans.woff2',
@@ -23,7 +24,7 @@ const displayFont = localFont({
 export const metadata: Metadata = {
   title: 'Parichayam Café — The Table Menu',
   description: 'Browse the Parichayam Café menu, from coffee and matcha to pizzas, rice bowls and dessert.',
-  icons: { icon: '/brand/parichayam.svg' },
+  icons: { icon: { url: '/brand/favicon.svg', type: 'image/svg+xml' } },
 };
 
 export const viewport: Viewport = { themeColor: '#f6f1e7' };

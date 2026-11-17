@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { cafeTimeZone } from '@/lib/cafe-time';
+import { tableCount } from '@/lib/table-service';
 import { requestJson } from './client';
 import type { StaffQueue } from './types';
 
@@ -109,7 +110,7 @@ export default function StaffDashboard() {
                 void update({ type: 'reservation', id: reservation.id, status: 'confirmed', table });
               }}>
                 <fieldset disabled={busy}>
-                  <label>Assign table<input name="table" type="number" min="1" max="999" required /></label>
+                  <label>Assign table<input name="table" type="number" min="1" max={tableCount} required /></label>
                   <div className="staff-actions">
                     <button type="submit" className="button button-primary">Confirm table</button>
                     <button type="button" className="plain-action" onClick={() => void update({

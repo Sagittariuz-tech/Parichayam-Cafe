@@ -43,5 +43,4 @@ body:has(dialog[open]) .welcome-toast { visibility: hidden; }
 .queue-entry input { max-width: 144px; }
 @media (max-width: 700px) {
   .staff-queue { grid-template-columns: 1fr; }
-  .dish-dialog > .detail-photo { aspect-ratio: 1.65; }
 }

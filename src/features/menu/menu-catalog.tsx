@@ -3,7 +3,7 @@ import { categories, categoryLabel, dietaryLabels, dishes, filterDishes, quickCa
 import { CategoryButtons } from './category-buttons';
 import DishCard from './dish-card';
 import { RevealWords } from './reveal-words';
-import { CloseDialog, closeOnBackdrop } from '@/components/modal-controls';
+import CategoryDrawer from './category-drawer';
 
 const pageSize = 18;
 
@@ -12,6 +12,7 @@ export default function MenuCatalog({ onSelectDish, scrollTo }: {
   scrollTo: (target: HTMLElement, offset?: number) => void;
 }) {
   const [categoryId, setCategoryId] = useState(0);
+  const [drawerOpen, setDrawerOpen] = useState(false);
   const [diet, setDiet] = useState<Diet>('');
   const [search, setSearch] = useState('');
   const [limit, setLimit] = useState(pageSize);
@@ -72,7 +73,7 @@ export default function MenuCatalog({ onSelectDish, scrollTo }: {
                 value={search} onChange={event => { setSearch(event.target.value); setLimit(pageSize); }} />
             </div>
             <button type="button" className="button button-outline category-toggle" aria-haspopup="dialog"
-              aria-controls="category-dialog" onClick={() => categoryDialog.current?.showModal()}>
+              aria-controls="category-dialog" onClick={() => setDrawerOpen(true)}>
               Categories <span aria-hidden="true">≡</span>
             </button>
           </div>
@@ -116,19 +117,8 @@ export default function MenuCatalog({ onSelectDish, scrollTo }: {
           </div>
         </div>
       </div>
-      <dialog ref={categoryDialog} id="category-dialog" className="dialog categories-dialog"
-        aria-labelledby="category-title" data-lenis-prevent onClick={closeOnBackdrop}>
-        <header className="dialog-header">
-          <h2 id="category-title">Categories</h2>
-          <CloseDialog label="Close categories" />
-        </header>
-        <nav aria-label="All menu categories">
-          <CategoryButtons selected={categoryId} onSelect={changeCategory} />
-        </nav>
-      </dialog>
+      <CategoryDrawer dialogRef={categoryDialog} open={drawerOpen} selected={categoryId}
+        onSelect={changeCategory} onClose={() => setDrawerOpen(false)} />
     </section>
   );
 }
-
-
-

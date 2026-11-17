@@ -1,0 +1,2130 @@
+{
+  "Cheese Sandwich": {
+    "description": "Golden toast gives way to molten cheese. A small, deeply comforting thing to hold in both hands.",
+    "suggestions": [
+      "Extra cheese",
+      "Extra toasted",
+      "Cut in halves"
+    ]
+  },
+  "Chicken Sandwich": {
+    "description": "A chicken sandwich for the moments when a good lunch is all you need.",
+    "suggestions": [
+      "Sauce on the side",
+      "Extra toasted",
+      "Cut in halves"
+    ]
+  },
+  "Chicken Tikka Sandwich": {
+    "description": "Chicken tikka brings the warmth of spice to an easy, satisfying bite.",
+    "suggestions": [
+      "Milder seasoning",
+      "Extra toasted",
+      "Sauce on the side"
+    ]
+  },
+  "Grilled Chicken Sandwich": {
+    "description": "Grilled chicken and the simple pleasure of a sandwich worth slowing down for.",
+    "suggestions": [
+      "Extra toasted",
+      "Sauce on the side",
+      "Add cheese"
+    ]
+  },
+  "Peri Peri Grilled Chicken Sandwich": {
+    "description": "A grilled chicken sandwich with peri peri warmth that lingers just long enough.",
+    "suggestions": [
+      "Milder seasoning",
+      "Extra toasted",
+      "Sauce on the side"
+    ]
+  },
+  "Smokey Paneer Sandwich": {
+    "description": "Smoky paneer gives this sandwich a quiet depth with every bite.",
+    "suggestions": [
+      "Extra paneer",
+      "Extra toasted",
+      "Cut in halves"
+    ]
+  },
+  "Veg Sandwich": {
+    "description": "A vegetable sandwich for a light lunch and a little breathing room.",
+    "suggestions": [
+      "Extra vegetables",
+      "Extra toasted",
+      "Add cheese"
+    ]
+  },
+  "Aloo Tikki Burger": {
+    "description": "An aloo tikki tucked into a bun, with the familiar comfort of a favourite street-side bite.",
+    "suggestions": [
+      "Add cheese",
+      "Sauce on the side",
+      "Lightly toasted bun"
+    ]
+  },
+  "Chicken Crunchy Burger": {
+    "description": "A golden chicken crunch beneath a soft bun. The first bite does all the talking.",
+    "suggestions": [
+      "Extra crispy",
+      "Add cheese",
+      "Sauce on the side"
+    ]
+  },
+  "Maha Raja Burger": {
+    "description": "A generous burger made for two hands, a good appetite and a pause between bites.",
+    "suggestions": [
+      "Extra cheese",
+      "Sauce on the side",
+      "Cut in halves"
+    ]
+  },
+  "Paneer Burger": {
+    "description": "Paneer takes centre stage in a burger that feels every bit as substantial as it looks.",
+    "suggestions": [
+      "Extra paneer",
+      "Milder seasoning",
+      "Sauce on the side"
+    ]
+  },
+  "Spicy Crunchy Burger": {
+    "description": "An audible crunch and a trail of spice make this a burger that stays with you.",
+    "suggestions": [
+      "Milder seasoning",
+      "Add cheese",
+      "Sauce on the side"
+    ]
+  },
+  "Veg Burger": {
+    "description": "The everyday veg burger, best enjoyed while the conversation carries on around it.",
+    "suggestions": [
+      "Add cheese",
+      "Sauce on the side",
+      "Lightly toasted bun"
+    ]
+  },
+  "Alfredo Pasta (Non-Veg)": {
+    "description": "Silky Alfredo makes this savoury pasta the sort of comfort you linger over.",
+    "suggestions": [
+      "Extra sauce",
+      "Extra cheese",
+      "Light garlic"
+    ]
+  },
+  "Alfredo Pasta (Veg)": {
+    "description": "A soft, creamy Alfredo that wraps around every bite of vegetable pasta.",
+    "suggestions": [
+      "Extra vegetables",
+      "Extra sauce",
+      "Extra cheese"
+    ]
+  },
+  "Alio Olio Pasta (Non-Veg)": {
+    "description": "Garlicky, savoury pasta with the light touch of olive oil and a generous appetite in mind.",
+    "suggestions": [
+      "Extra garlic",
+      "Light oil",
+      "Chilli flakes on the side"
+    ]
+  },
+  "Alio Olio Pasta (Veg)": {
+    "description": "The simple grace of garlic and olive oil, with the vegetables left room to shine.",
+    "suggestions": [
+      "Extra vegetables",
+      "Extra garlic",
+      "Light oil"
+    ]
+  },
+  "Arrabbiata Pasta (Non-Veg)": {
+    "description": "Tomato brightness and a rising chilli warmth give this pasta a lively finish.",
+    "suggestions": [
+      "Milder chilli",
+      "Extra sauce",
+      "Extra cheese"
+    ]
+  },
+  "Arrabbiata Pasta (Veg)": {
+    "description": "A bright red sauce with just the sort of heat that calls you back for another forkful.",
+    "suggestions": [
+      "Milder chilli",
+      "Extra vegetables",
+      "Extra sauce"
+    ]
+  },
+  "Pink Sauce Pasta (Non-Veg)": {
+    "description": "A rosy sauce brings creaminess and a little tomato brightness to a hearty forkful.",
+    "suggestions": [
+      "Extra sauce",
+      "Extra cheese",
+      "Milder seasoning"
+    ]
+  },
+  "Pink Sauce Pasta (Veg)": {
+    "description": "Tomato and cream meet in a rosy sauce with a gentle, lingering tang.",
+    "suggestions": [
+      "Extra vegetables",
+      "Extra sauce",
+      "Light cheese"
+    ]
+  },
+  "SPAGHETTI ALFREDO NON-VEG": {
+    "description": "Long strands of spaghetti carry the velvet richness of Alfredo from bowl to fork.",
+    "suggestions": [
+      "Extra sauce",
+      "Extra cheese",
+      "Light garlic"
+    ]
+  },
+  "SPAGHETTI ALFREDO VEG": {
+    "description": "A twirl of spaghetti in creamy Alfredo, with the quiet comfort of a slow lunch.",
+    "suggestions": [
+      "Extra vegetables",
+      "Extra sauce",
+      "Extra cheese"
+    ]
+  },
+  "SPAGHETTI ARRABBIATA VEG": {
+    "description": "Spaghetti draws up a bright tomato sauce with a little fire at the edges.",
+    "suggestions": [
+      "Milder chilli",
+      "Extra vegetables",
+      "Extra sauce"
+    ]
+  },
+  "SPAGHETTI ARRABITTA NON-VEG": {
+    "description": "A long twirl of spaghetti, a bright savoury sauce and a spark of chilli at the finish.",
+    "suggestions": [
+      "Milder chilli",
+      "Extra sauce",
+      "Extra cheese"
+    ]
+  },
+  "SPAGHETTI PINK SAUCE PASTA NON-VEG": {
+    "description": "Rosy sauce clings to the spaghetti, balancing its savoury richness with a soft tomato tang.",
+    "suggestions": [
+      "Extra sauce",
+      "Extra cheese",
+      "Milder seasoning"
+    ]
+  },
+  "SPAGHETTI PINK SAUCE PASTA VEG": {
+    "description": "Spaghetti in a blush of tomato and cream, gentle enough to savour one twirl at a time.",
+    "suggestions": [
+      "Extra vegetables",
+      "Extra sauce",
+      "Light cheese"
+    ]
+  },
+  "Cafe Latte": {
+    "description": "Espresso softens into steamed milk. An unhurried cup for an unhurried moment.",
+    "suggestions": [
+      "Less sugar",
+      "Extra hot",
+      "Add an espresso shot"
+    ]
+  },
+  "Choco Mocha": {
+    "description": "Coffee and chocolate come together in a cup that sits happily between the coffee bar and dessert.",
+    "suggestions": [
+      "Less sweet",
+      "Extra chocolate",
+      "Add an espresso shot"
+    ]
+  },
+  "Classic Americano": {
+    "description": "An open, clean espresso taste in a cup you can sip a little more slowly.",
+    "suggestions": [
+      "Hot water on the side",
+      "Sugar on the side",
+      "Add an espresso shot"
+    ]
+  },
+  "Double Shot Espresso": {
+    "description": "Two shots for a short, full-flavoured coffee with a long finish.",
+    "suggestions": [
+      "Sugar on the side",
+      "Water on the side",
+      "A splash of milk on the side"
+    ]
+  },
+  "Flat White": {
+    "description": "A concentrated coffee taste beneath a thin, velvety layer of milk.",
+    "suggestions": [
+      "Less sugar",
+      "Extra hot",
+      "Add an espresso shot"
+    ]
+  },
+  "Silky Cappuccino": {
+    "description": "Foam, warmth and espresso, with a silky first sip that makes you slow down.",
+    "suggestions": [
+      "Less sugar",
+      "Extra hot",
+      "Add an espresso shot"
+    ]
+  },
+  "Single Shot Espresso": {
+    "description": "One small cup with a clear espresso flavour and a lingering finish.",
+    "suggestions": [
+      "Sugar on the side",
+      "Water on the side",
+      "A splash of milk on the side"
+    ]
+  },
+  "Belgian Chocolate Indulgence": {
+    "description": "Belgian chocolate at the centre of a cup you might just order in place of dessert.",
+    "suggestions": [
+      "Less sweet",
+      "Extra hot",
+      "Extra chocolate"
+    ]
+  },
+  "Rich Hot Chocolate": {
+    "description": "Deep chocolate warmth, made for both hands around the cup.",
+    "suggestions": [
+      "Less sweet",
+      "Extra hot",
+      "Extra chocolate"
+    ]
+  },
+  "Biscoff Affogato": {
+    "description": "Biscoff gives the classic contrast of hot espresso and cool ice cream a caramel-biscuit finish.",
+    "suggestions": [
+      "Espresso on the side",
+      "Extra Biscoff",
+      "Two spoons please"
+    ]
+  },
+  "Classic Affogato": {
+    "description": "Hot espresso meets ice cream. Catch it somewhere between the first cold spoonful and the last coffee sip.",
+    "suggestions": [
+      "Espresso on the side",
+      "Extra ice cream",
+      "Two spoons please"
+    ]
+  },
+  "Sunrise by the Shore": {
+    "description": "A café special named for that bright first hour by the shore.",
+    "suggestions": [
+      "Light ice",
+      "Less sweet",
+      "Serve without a straw"
+    ]
+  },
+  "Sunset over the Harbour": {
+    "description": "A house drink for the hour when the harbour light fades and nobody quite wants to leave.",
+    "suggestions": [
+      "Light ice",
+      "Less sweet",
+      "Serve without a straw"
+    ]
+  },
+  "Blue Tea": {
+    "description": "A blue infusion that gives you something lovely to watch while the cup steeps.",
+    "suggestions": [
+      "Honey on the side",
+      "Steep lightly",
+      "Serve extra hot"
+    ]
+  },
+  "Calming Chamomile": {
+    "description": "A softly floral chamomile cup for the slower end of the day.",
+    "suggestions": [
+      "Honey on the side",
+      "Steep lightly",
+      "Serve extra hot"
+    ]
+  },
+  "Hibiscus Bloom": {
+    "description": "Hibiscus lends a bright tartness and a jewel-like colour to a warming cup.",
+    "suggestions": [
+      "Honey on the side",
+      "Steep lightly",
+      "Serve extra hot"
+    ]
+  },
+  "Lemon Tea": {
+    "description": "Lemon lifts a hot cup of tea with a crisp, clean finish.",
+    "suggestions": [
+      "Extra lemon",
+      "Honey on the side",
+      "Serve extra hot"
+    ]
+  },
+  "Minty Green Brew": {
+    "description": "Fresh mint makes this green brew feel especially light on the palate.",
+    "suggestions": [
+      "Steep lightly",
+      "Honey on the side",
+      "Lemon on the side"
+    ]
+  },
+  "Pure Green Leaf": {
+    "description": "A quiet cup with the gentle, grassy character of green tea.",
+    "suggestions": [
+      "Steep lightly",
+      "Honey on the side",
+      "Lemon on the side"
+    ]
+  },
+  "Green Mint Tea Jar": {
+    "description": "A pot of green tea and mint to pour and share at your own pace.",
+    "suggestions": [
+      "Extra cups",
+      "Steep lightly",
+      "Honey on the side"
+    ]
+  },
+  "Lemon Tea Jar": {
+    "description": "Lemon brightens this tea jar from the first pour to the last.",
+    "suggestions": [
+      "Extra cups",
+      "Extra lemon",
+      "Honey on the side"
+    ]
+  },
+  "Slow Brewed Green Tea Jar": {
+    "description": "Green tea given time to settle into a pot worth keeping on the table.",
+    "suggestions": [
+      "Extra cups",
+      "Steep lightly",
+      "Honey on the side"
+    ]
+  },
+  "cranberry cold brew": {
+    "description": "Cranberry brings a tart edge to the deep, cool taste of cold brew.",
+    "suggestions": [
+      "Light ice",
+      "No added sugar",
+      "Serve without a straw"
+    ]
+  },
+  "DIET COKE": {
+    "description": "A familiar, cold cola to sip between bites.",
+    "suggestions": [
+      "Serve chilled",
+      "Glass on the side",
+      "Ice on the side"
+    ]
+  },
+  "extra chocolate": {
+    "description": "A little extra chocolate when the cup or dessert could use a deeper finish.",
+    "suggestions": [
+      "Serve on the side",
+      "In a separate cup",
+      "Bring with dessert"
+    ]
+  },
+  "Fresh Lime Soda (Salt)": {
+    "description": "The bright taste of lime with a pinch of salt. Especially welcome alongside a spicy bite.",
+    "suggestions": [
+      "Light salt",
+      "Extra lime",
+      "Light ice"
+    ]
+  },
+  "Fresh Lime Soda (Sweet)": {
+    "description": "Fresh lime and a gentle sweetness in a sparkling glass.",
+    "suggestions": [
+      "Less sweet",
+      "Extra lime",
+      "Light ice"
+    ]
+  },
+  "fresh lime sweet&salt": {
+    "description": "Sweetness and salt meet around the sharp, refreshing taste of fresh lime.",
+    "suggestions": [
+      "Light salt",
+      "Less sweet",
+      "Extra lime"
+    ]
+  },
+  "Monster (Tin)": {
+    "description": "An energy drink served in its original tin.",
+    "suggestions": [
+      "Serve chilled",
+      "Glass on the side",
+      "Leave the tin unopened"
+    ]
+  },
+  "Sprite": {
+    "description": "A crisp lemon-lime soda for a cool pause between dishes.",
+    "suggestions": [
+      "Serve chilled",
+      "Glass on the side",
+      "Ice on the side"
+    ]
+  },
+  "Thums Up": {
+    "description": "A bold cola with the sharp fizz that belongs next to a good plate of snacks.",
+    "suggestions": [
+      "Serve chilled",
+      "Glass on the side",
+      "Ice on the side"
+    ]
+  },
+  "Water Bottle 1 Ltr": {
+    "description": "A one-litre bottle of water to keep on the table and share.",
+    "suggestions": [
+      "Serve chilled",
+      "Serve at room temperature",
+      "Bring glasses"
+    ]
+  },
+  "water bottle 750ml": {
+    "description": "A 750 ml bottle to keep close through the meal.",
+    "suggestions": [
+      "Serve chilled",
+      "Serve at room temperature",
+      "Bring glasses"
+    ]
+  },
+  "Caramel Macchiato": {
+    "description": "Caramel brings a mellow sweetness to the slow meeting of milk and espresso.",
+    "suggestions": [
+      "Light syrup",
+      "Extra hot",
+      "Add an espresso shot"
+    ]
+  },
+  "Cinnamon Macchiato": {
+    "description": "Cinnamon leaves a fragrant finish after the layers of espresso and milk come together.",
+    "suggestions": [
+      "Light cinnamon",
+      "Extra hot",
+      "Add an espresso shot"
+    ]
+  },
+  "Hazelnut Macchiato": {
+    "description": "Hazelnut warms the flavour of this layered espresso and milk.",
+    "suggestions": [
+      "Light syrup",
+      "Extra hot",
+      "Add an espresso shot"
+    ]
+  },
+  "Irish Cream Macchiato": {
+    "description": "Irish cream flavour gives the layered macchiato a rounded, dessert-like finish.",
+    "suggestions": [
+      "Light syrup",
+      "Extra hot",
+      "Add an espresso shot"
+    ]
+  },
+  "Latte Macchiato": {
+    "description": "See the milk and espresso in layers before stirring them into one generous sip.",
+    "suggestions": [
+      "Less sugar",
+      "Extra hot",
+      "Add an espresso shot"
+    ]
+  },
+  "Vanilla Macchiato": {
+    "description": "A soft vanilla note lingers as the espresso meets the milk.",
+    "suggestions": [
+      "Light syrup",
+      "Extra hot",
+      "Add an espresso shot"
+    ]
+  },
+  "Blueberry Matcha": {
+    "description": "Blueberry brightness meets the grassy depth of cool matcha.",
+    "suggestions": [
+      "Less sweet",
+      "Light ice",
+      "Serve unstirred"
+    ]
+  },
+  "Classic Matcha": {
+    "description": "Cool, green and quietly earthy, with the clear flavour of matcha at the centre.",
+    "suggestions": [
+      "Light ice",
+      "Less sweet",
+      "Extra matcha"
+    ]
+  },
+  "MANGO MATCHA": {
+    "description": "Mango brings a sunny softness to the earthy taste of cold matcha.",
+    "suggestions": [
+      "Less sweet",
+      "Light ice",
+      "Serve unstirred"
+    ]
+  },
+  "Strawberry Matcha": {
+    "description": "A bright strawberry note against the grassy coolness of matcha.",
+    "suggestions": [
+      "Less sweet",
+      "Light ice",
+      "Serve unstirred"
+    ]
+  },
+  "BELGIAN CHOCOLATE ICE CREAM": {
+    "description": "A cool scoop with the deep, rounded taste of Belgian chocolate.",
+    "suggestions": [
+      "Chocolate sauce on the side",
+      "Separate bowl",
+      "Two spoons please"
+    ]
+  },
+  "Brownie": {
+    "description": "A chocolate brownie for the moment when you only wanted one more bite.",
+    "suggestions": [
+      "Warm it up",
+      "Chocolate sauce on the side",
+      "Cut in halves"
+    ]
+  },
+  "Brownie with Chocolate": {
+    "description": "A brownie with chocolate added for a darker, richer finish.",
+    "suggestions": [
+      "Warm it up",
+      "Chocolate sauce on the side",
+      "Cut in halves"
+    ]
+  },
+  "Brownie with Ice Cream": {
+    "description": "A chocolate brownie and ice cream, with a soft cold spoonful against each rich bite.",
+    "suggestions": [
+      "Warm the brownie",
+      "Ice cream on the side",
+      "Two spoons please"
+    ]
+  },
+  "BUTTERSCOTCH ICE CREAM": {
+    "description": "The mellow, caramel-like sweetness of butterscotch in a cool scoop.",
+    "suggestions": [
+      "Serve in a bowl",
+      "Sauce on the side",
+      "Two spoons please"
+    ]
+  },
+  "CARAMEL NUT ICE CREAM": {
+    "description": "Caramel sweetness and the warmly nutty character of this ice cream make a lovely last bite.",
+    "suggestions": [
+      "No extra topping",
+      "Serve in a bowl",
+      "Two spoons please"
+    ]
+  },
+  "CHACO LAVA WITH ICE CREAM": {
+    "description": "A chocolate centre made to meet a cold spoonful of ice cream.",
+    "suggestions": [
+      "Ice cream on the side",
+      "Serve warm",
+      "Two spoons please"
+    ]
+  },
+  "CHOCOLATE BROWNIE ICE CREAM": {
+    "description": "The taste of chocolate brownie in a scoop cold enough to linger over.",
+    "suggestions": [
+      "Chocolate sauce on the side",
+      "Separate bowl",
+      "Two spoons please"
+    ]
+  },
+  "Choco Lava": {
+    "description": "Break into the chocolate cake and give its soft centre a moment of its own.",
+    "suggestions": [
+      "Serve warm",
+      "Chocolate sauce on the side",
+      "Two spoons please"
+    ]
+  },
+  "extra ice cream": {
+    "description": "An extra scoop to share, or to keep beside the last piece of brownie.",
+    "suggestions": [
+      "In a separate bowl",
+      "Bring with dessert",
+      "Two spoons please"
+    ]
+  },
+  "FRUIT OVERLOAD ICE CREAM": {
+    "description": "A fruity scoop for a cool, bright finish to the meal.",
+    "suggestions": [
+      "Fruit topping on the side",
+      "Serve in a bowl",
+      "Two spoons please"
+    ]
+  },
+  "KITKAT WITH ICE CREAM": {
+    "description": "KitKat and ice cream give you crisp wafer and a cool scoop on the same spoon.",
+    "suggestions": [
+      "KitKat on the side",
+      "Serve in a bowl",
+      "Two spoons please"
+    ]
+  },
+  "MANGO ICE CREAM": {
+    "description": "Mango takes this cold scoop in a soft, sunny direction.",
+    "suggestions": [
+      "Fruit topping on the side",
+      "Serve in a bowl",
+      "Two spoons please"
+    ]
+  },
+  "PISTA ICE CREAM": {
+    "description": "A quiet pistachio flavour that stays with you after the scoop has melted.",
+    "suggestions": [
+      "No extra topping",
+      "Serve in a bowl",
+      "Two spoons please"
+    ]
+  },
+  "STRAWBERRY ICE CREAM": {
+    "description": "A soft pink scoop with the bright, familiar taste of strawberry.",
+    "suggestions": [
+      "Fruit topping on the side",
+      "Serve in a bowl",
+      "Two spoons please"
+    ]
+  },
+  "VENNILA ICE CREAM": {
+    "description": "Vanilla in its simplest form, just as good beside a dessert as it is on its own.",
+    "suggestions": [
+      "Serve in a bowl",
+      "Sauce on the side",
+      "Two spoons please"
+    ]
+  },
+  "Chicken Lovers Combo": {
+    "description": "A chicken rice bowl, pizza, wings and fries for a table that wants a little of everything.",
+    "suggestions": [
+      "Dips on the side",
+      "Milder seasoning",
+      "Extra plates"
+    ]
+  },
+  "Friends Combo": {
+    "description": "A crunchy burger, Chicken 65 and a peri peri rice bowl made for trading bites with a friend.",
+    "suggestions": [
+      "Peri peri seasoning on the side",
+      "Burger sauce on the side",
+      "Extra plates"
+    ]
+  },
+  "Parichayam Signature Combo": {
+    "description": "Signature rice, Harbour Pizza and a sunrise mojito bring a few Parichayam favourites together.",
+    "suggestions": [
+      "Light ice in the mojito",
+      "Extra plates",
+      "Fries seasoning on the side"
+    ]
+  },
+  "Tandoori Feast Combo": {
+    "description": "Tandoori chicken, pizza and loaded fries, with a cool mojito to give the table a pause.",
+    "suggestions": [
+      "Dips on the side",
+      "Milder seasoning",
+      "Extra plates"
+    ]
+  },
+  "Veg Feast Combo": {
+    "description": "From a warm veg soup to paneer pizza and a lime-bright mojito, a feast to share.",
+    "suggestions": [
+      "Milder soup",
+      "Light ice in the mojito",
+      "Extra plates"
+    ]
+  },
+  "Caramel Shot": {
+    "description": "A measured touch of caramel for the cup that could use a little more sweetness.",
+    "suggestions": [
+      "Serve on the side",
+      "Mix into the drink",
+      "Bring with the coffee"
+    ]
+  },
+  "CINNAMON FLAVOUR": {
+    "description": "A warm cinnamon note to add to your coffee.",
+    "suggestions": [
+      "Serve on the side",
+      "Mix into the drink",
+      "Bring with the coffee"
+    ]
+  },
+  "Hazelnut Shot": {
+    "description": "Hazelnut brings a gently nutty finish to your chosen cup.",
+    "suggestions": [
+      "Serve on the side",
+      "Mix into the drink",
+      "Bring with the coffee"
+    ]
+  },
+  "Honey Dip": {
+    "description": "A little honey to stir into hot tea at your own pace.",
+    "suggestions": [
+      "Serve the honey separately",
+      "Bring with the tea",
+      "Add a teaspoon"
+    ]
+  },
+  "Irish Cream Shot": {
+    "description": "A soft Irish cream flavour to round out coffee.",
+    "suggestions": [
+      "Serve on the side",
+      "Mix into the drink",
+      "Bring with the coffee"
+    ]
+  },
+  "Vanilla Shot": {
+    "description": "Vanilla lends a gentle sweetness to your coffee or milk.",
+    "suggestions": [
+      "Serve on the side",
+      "Mix into the drink",
+      "Bring with the coffee"
+    ]
+  },
+  "cinnamon cold brew": {
+    "description": "Aromatic cinnamon stays on the palate after each cool sip of coffee.",
+    "suggestions": [
+      "Light cinnamon",
+      "Light ice",
+      "No added sugar"
+    ]
+  },
+  "Cold Brew": {
+    "description": "Cold brew for when you want the clear, slow taste of coffee over ice.",
+    "suggestions": [
+      "Light ice",
+      "No added sugar",
+      "Serve without a straw"
+    ]
+  },
+  "ESPRESSO BOMB": {
+    "description": "Double espresso, lemon, soda and salt make for a bright, brisk first sip.",
+    "suggestions": [
+      "No added salt",
+      "Extra lemon",
+      "Light ice"
+    ]
+  },
+  "Espresso Tonic": {
+    "description": "The bitter snap of tonic and the depth of espresso make an unusually refreshing glass.",
+    "suggestions": [
+      "Lemon on the side",
+      "Light ice",
+      "Serve without a straw"
+    ]
+  },
+  "ESPRESSO TONIC BOMB": {
+    "description": "Espresso and tonic, sharpened with lemon and salt for a vivid, sparkling finish.",
+    "suggestions": [
+      "Lemon on the side",
+      "Light ice",
+      "Serve without a straw"
+    ]
+  },
+  "Iced Americano": {
+    "description": "The taste of espresso stretched into a long, cool glass.",
+    "suggestions": [
+      "Light ice",
+      "No added sugar",
+      "Serve without a straw"
+    ]
+  },
+  "ICED LATTE": {
+    "description": "Espresso and milk fold into one another over ice.",
+    "suggestions": [
+      "Less sweet",
+      "Light ice",
+      "Add an espresso shot"
+    ]
+  },
+  "Iced Mocha": {
+    "description": "Chocolate brings roundness to a very cool espresso and milk.",
+    "suggestions": [
+      "Less sweet",
+      "Light ice",
+      "Extra chocolate"
+    ]
+  },
+  "Spanish Latte": {
+    "description": "A mellow Spanish latte to enjoy as the ice slowly settles into the glass.",
+    "suggestions": [
+      "Less sweet",
+      "Light ice",
+      "Add an espresso shot"
+    ]
+  },
+  "Vietnamese Iced Coffee": {
+    "description": "A bold Vietnamese iced coffee with a gently sweet finish.",
+    "suggestions": [
+      "Less sweet",
+      "Light ice",
+      "Add an espresso shot"
+    ]
+  },
+  "Blueberry Ice Tea": {
+    "description": "Blueberry gives this iced tea a softly tart, berry-bright finish.",
+    "suggestions": [
+      "Less sweet",
+      "Light ice",
+      "Extra lemon on the side"
+    ]
+  },
+  "Blue Caracao Ice Tea": {
+    "description": "Blue curaçao brings a citrusy lift to a cold glass of tea.",
+    "suggestions": [
+      "Less sweet",
+      "Light ice",
+      "Extra citrus"
+    ]
+  },
+  "Classic Lemon Ice Tea": {
+    "description": "Black tea and lemon make a cold glass with a bright, familiar edge.",
+    "suggestions": [
+      "Less sweet",
+      "Light ice",
+      "Extra citrus"
+    ]
+  },
+  "Orange Ice Tea": {
+    "description": "Orange gives this iced tea a sunny citrus finish.",
+    "suggestions": [
+      "Less sweet",
+      "Light ice",
+      "Extra citrus"
+    ]
+  },
+  "Peach Ice Tea": {
+    "description": "Peach softens the tea into an easy, fragrant drink.",
+    "suggestions": [
+      "Less sweet",
+      "Light ice",
+      "Extra lemon on the side"
+    ]
+  },
+  "Strawberry Ice Tea": {
+    "description": "Strawberry leaves a bright berry note after each cool sip.",
+    "suggestions": [
+      "Less sweet",
+      "Light ice",
+      "Extra lemon on the side"
+    ]
+  },
+  "Watermelon Ice Tea": {
+    "description": "Watermelon makes this chilled tea feel especially light.",
+    "suggestions": [
+      "Less sweet",
+      "Light ice",
+      "Extra lemon on the side"
+    ]
+  },
+  "Caramel Frappe": {
+    "description": "Cold, smooth and mellow, with caramel lingering after the first sip.",
+    "suggestions": [
+      "Light caramel",
+      "Less sweet",
+      "Skip whipped topping"
+    ]
+  },
+  "Coffee Frappe": {
+    "description": "A frosted coffee for the days when you want to keep your cup cold and your pace slow.",
+    "suggestions": [
+      "Less sweet",
+      "Add an espresso shot",
+      "Skip whipped topping"
+    ]
+  },
+  "Hazelnut Frappe": {
+    "description": "Hazelnut brings a warm, nutty taste to a frosted glass.",
+    "suggestions": [
+      "Light hazelnut flavour",
+      "Less sweet",
+      "Skip whipped topping"
+    ]
+  },
+  "Mocha Frappe": {
+    "description": "Coffee and chocolate settle into a frosted glass with a dessert-like finish.",
+    "suggestions": [
+      "Extra chocolate",
+      "Less sweet",
+      "Skip whipped topping"
+    ]
+  },
+  "Vanilla Frappe": {
+    "description": "A gentle vanilla finish as the frosted coffee softens in the glass.",
+    "suggestions": [
+      "Light vanilla flavour",
+      "Less sweet",
+      "Skip whipped topping"
+    ]
+  },
+  "Biscoff Shake": {
+    "description": "The warmly spiced biscuit taste of Biscoff in a thick, cold shake.",
+    "suggestions": [
+      "Biscuit topping on the side",
+      "Less sweet",
+      "Skip whipped topping"
+    ]
+  },
+  "Blueberry Fusion Shake": {
+    "description": "A deep berry note gives this thick shake a softly tart finish.",
+    "suggestions": [
+      "Less sweet",
+      "Fruit topping on the side",
+      "Skip whipped topping"
+    ]
+  },
+  "Brownie Shake": {
+    "description": "Chocolate brownie makes this shake feel like a dessert you can sip.",
+    "suggestions": [
+      "Extra chocolate",
+      "Less sweet",
+      "Skip whipped topping"
+    ]
+  },
+  "Chocolate Shake": {
+    "description": "A cold, thick chocolate shake for an uncomplicated dessert craving.",
+    "suggestions": [
+      "Extra chocolate",
+      "Less sweet",
+      "Skip whipped topping"
+    ]
+  },
+  "Classic Vanilla Shake": {
+    "description": "Vanilla with an easy, creamy finish. A classic for good reason.",
+    "suggestions": [
+      "Light vanilla flavour",
+      "Less sweet",
+      "Skip whipped topping"
+    ]
+  },
+  "KitKat Shake": {
+    "description": "KitKat brings chocolate and wafer to a cold shake meant for slow sips.",
+    "suggestions": [
+      "Biscuit topping on the side",
+      "Less sweet",
+      "Skip whipped topping"
+    ]
+  },
+  "Mango Shake": {
+    "description": "The sunny sweetness of mango makes this shake feel like dessert in summer.",
+    "suggestions": [
+      "Less sweet",
+      "Fruit topping on the side",
+      "Skip whipped topping"
+    ]
+  },
+  "mixed berry thickshek": {
+    "description": "Mixed berries give a bright, tart balance to a thick, creamy glass.",
+    "suggestions": [
+      "Less sweet",
+      "Fruit topping on the side",
+      "Skip whipped topping"
+    ]
+  },
+  "nutella thick shake": {
+    "description": "The familiar chocolate and hazelnut taste of Nutella in a thick, cold shake.",
+    "suggestions": [
+      "Less sweet",
+      "No extra topping",
+      "Serve without a straw"
+    ]
+  },
+  "Oreo Shake": {
+    "description": "Oreo gives this shake the familiar contrast of dark biscuit and a creamy sip.",
+    "suggestions": [
+      "Biscuit topping on the side",
+      "Less sweet",
+      "Skip whipped topping"
+    ]
+  },
+  "PEANUT BUTTER THICKSHAKE": {
+    "description": "Peanut butter leaves a generous, nutty finish in this thick shake.",
+    "suggestions": [
+      "Less sweet",
+      "No extra topping",
+      "Serve without a straw"
+    ]
+  },
+  "Strawberry Shake": {
+    "description": "Strawberry in a thick, cold shake with a bright berry finish.",
+    "suggestions": [
+      "Less sweet",
+      "Fruit topping on the side",
+      "Skip whipped topping"
+    ]
+  },
+  "Blueberry Mojito": {
+    "description": "Blueberry brings a soft tartness to the cool sparkle of a mojito.",
+    "suggestions": [
+      "Less sweet",
+      "Light ice",
+      "Extra mint"
+    ]
+  },
+  "Blue Caracao Mojito": {
+    "description": "A bright blue, citrus-led mojito with a brisk finish.",
+    "suggestions": [
+      "Extra lime",
+      "Less sweet",
+      "Light ice"
+    ]
+  },
+  "Classic Virgin Mojito": {
+    "description": "The classic lift of mint and lime in an alcohol-free glass.",
+    "suggestions": [
+      "Extra lime",
+      "Less sweet",
+      "Light ice"
+    ]
+  },
+  "Strawberry Mojito": {
+    "description": "Strawberry adds a gentle berry sweetness to a cool, sparkling mojito.",
+    "suggestions": [
+      "Less sweet",
+      "Light ice",
+      "Extra mint"
+    ]
+  },
+  "Tropical Sunrise Mojito": {
+    "description": "Tropical fruit colour and a cool sparkle, like the first light in a glass.",
+    "suggestions": [
+      "Less sweet",
+      "Light ice",
+      "Extra mint"
+    ]
+  },
+  "Watermelon Mojito": {
+    "description": "The light sweetness of watermelon in a cool mojito made for a long sip.",
+    "suggestions": [
+      "Less sweet",
+      "Light ice",
+      "Extra mint"
+    ]
+  },
+  "CHICKEN HOT&SOUR  1/2": {
+    "description": "Chicken, heat and a tangy finish in a smaller cup that still makes a big first impression.",
+    "suggestions": [
+      "Milder chilli",
+      "Less tangy",
+      "Pepper on the side"
+    ]
+  },
+  "Hot & Sour Soup (Non-Veg)": {
+    "description": "A savoury soup with a little fire at the front and a bright tang at the end.",
+    "suggestions": [
+      "Milder chilli",
+      "Less tangy",
+      "Pepper on the side"
+    ]
+  },
+  "Hot & Sour Soup (Veg)": {
+    "description": "A vegetable soup that wakes the palate with its meeting of chilli and tang.",
+    "suggestions": [
+      "Milder chilli",
+      "Less tangy",
+      "Pepper on the side"
+    ]
+  },
+  "Lemon Coriander Soup (Non-Veg)": {
+    "description": "Lemon and coriander keep this savoury chicken soup light and fragrant.",
+    "suggestions": [
+      "Extra lemon",
+      "Coriander on the side",
+      "Pepper on the side"
+    ]
+  },
+  "Lemon Coriander Soup (Veg)": {
+    "description": "A bright spoonful of lemon and coriander, with a light finish fit for the start of a meal.",
+    "suggestions": [
+      "Extra lemon",
+      "Coriander on the side",
+      "Pepper on the side"
+    ]
+  },
+  "LEMON COURIANDER CHICKEN 1/2": {
+    "description": "A smaller bowl of chicken soup lifted by lemon and coriander.",
+    "suggestions": [
+      "Extra lemon",
+      "Coriander on the side",
+      "Pepper on the side"
+    ]
+  },
+  "LEMON COURIANDER SOUP VEG 1/2": {
+    "description": "A light, fragrant half portion with lemon at the first sip and coriander at the finish.",
+    "suggestions": [
+      "Extra lemon",
+      "Coriander on the side",
+      "Pepper on the side"
+    ]
+  },
+  "MANCHOW SOUP CHICKEN 1/2": {
+    "description": "A small bowl of chicken Manchow with a bold, savoury character.",
+    "suggestions": [
+      "Crispy noodles on the side",
+      "Milder chilli",
+      "Extra spring onion"
+    ]
+  },
+  "Manchow Soup (Non-Veg)": {
+    "description": "Deeply savoury Manchow soup with the warmth that makes a good first course.",
+    "suggestions": [
+      "Crispy noodles on the side",
+      "Milder chilli",
+      "Extra spring onion"
+    ]
+  },
+  "Manchow Soup (Veg)": {
+    "description": "A warm vegetable Manchow for the moment you want something lively by the spoonful.",
+    "suggestions": [
+      "Crispy noodles on the side",
+      "Milder chilli",
+      "Extra spring onion"
+    ]
+  },
+  "MANCHOW SOUP VEG 1/2": {
+    "description": "All the savoury character of vegetable Manchow in a smaller helping.",
+    "suggestions": [
+      "Crispy noodles on the side",
+      "Milder chilli",
+      "Extra spring onion"
+    ]
+  },
+  "sweetcorn soup (nonveg)": {
+    "description": "Sweet corn gives this savoury soup a gentle sweetness that arrives a spoonful at a time.",
+    "suggestions": [
+      "Extra sweet corn",
+      "Pepper on the side",
+      "Serve extra hot"
+    ]
+  },
+  "sweetcorn soup (nonveg) 1/2": {
+    "description": "A smaller helping of sweet corn soup, mellow and comforting.",
+    "suggestions": [
+      "Extra sweet corn",
+      "Pepper on the side",
+      "Serve extra hot"
+    ]
+  },
+  "sweetcorn soup veg": {
+    "description": "Sweet corn takes centre stage in this softly savoury vegetable soup.",
+    "suggestions": [
+      "Extra sweet corn",
+      "Pepper on the side",
+      "Serve extra hot"
+    ]
+  },
+  "sweetcorn soup veg 1/2": {
+    "description": "A little bowl of sweet corn soup for a gentle start to the meal.",
+    "suggestions": [
+      "Extra sweet corn",
+      "Pepper on the side",
+      "Serve extra hot"
+    ]
+  },
+  "VEG HOT&SOUR SOUP 1/2": {
+    "description": "A smaller helping of hot and sour vegetable soup that leaves room for the next plate.",
+    "suggestions": [
+      "Milder chilli",
+      "Less tangy",
+      "Pepper on the side"
+    ]
+  },
+  "APOLLO FISH": {
+    "description": "A bold, savoury fish starter with the lively character that makes Apollo fish worth sharing.",
+    "suggestions": [
+      "Lemon on the side",
+      "Milder seasoning",
+      "Extra crispy"
+    ]
+  },
+  "cashew paneer": {
+    "description": "Paneer and cashew make an easy pairing of soft bites and warm nuttiness.",
+    "suggestions": [
+      "Extra cashews",
+      "Milder seasoning",
+      "Gravy on the side"
+    ]
+  },
+  "CHICKEN 555": {
+    "description": "A lively chicken starter to pass around before the mains arrive.",
+    "suggestions": [
+      "Extra crispy",
+      "Milder seasoning",
+      "Lemon on the side"
+    ]
+  },
+  "Chicken 65": {
+    "description": "A boldly spiced Chicken 65, made for taking one bite and reaching for another.",
+    "suggestions": [
+      "Extra crispy",
+      "Milder seasoning",
+      "Lemon on the side"
+    ]
+  },
+  "chicken majestic": {
+    "description": "A spirited chicken starter for a table that likes its first bites savoury and bold.",
+    "suggestions": [
+      "Milder seasoning",
+      "Sauce on the side",
+      "Extra spring onion"
+    ]
+  },
+  "Chicken Manchurian (Dry)": {
+    "description": "The savoury flavour of Manchurian clings to each chicken bite in this dry preparation.",
+    "suggestions": [
+      "Milder chilli",
+      "Extra spring onion",
+      "Drier finish"
+    ]
+  },
+  "Chicken Manchurian (Gravy)": {
+    "description": "Chicken Manchurian with a generous gravy for anyone who likes to catch the last spoonful.",
+    "suggestions": [
+      "Milder chilli",
+      "Extra gravy",
+      "Extra spring onion"
+    ]
+  },
+  "CHICKEN PAKODA": {
+    "description": "A chicken pakoda with the familiar pleasure of a golden fritter.",
+    "suggestions": [
+      "Extra crispy",
+      "Milder seasoning",
+      "Lemon on the side"
+    ]
+  },
+  "CHILLI CHICKEN DRY": {
+    "description": "Chilli chicken on the drier side, with the flavour gathered close around each bite.",
+    "suggestions": [
+      "Milder chilli",
+      "Extra bell peppers",
+      "Extra spring onion"
+    ]
+  },
+  "chilli chicken (WET)": {
+    "description": "Chilli chicken with a saucier finish and a warmth that lingers.",
+    "suggestions": [
+      "Milder chilli",
+      "Extra gravy",
+      "Extra bell peppers"
+    ]
+  },
+  "CHILLI FISH": {
+    "description": "Chilli gives this fish starter a bright, bold kick between bites.",
+    "suggestions": [
+      "Milder chilli",
+      "Lemon on the side",
+      "Extra bell peppers"
+    ]
+  },
+  "Chilli Mushroom": {
+    "description": "Mushrooms give each bite a savoury depth before the chilli makes itself known.",
+    "suggestions": [
+      "Milder chilli",
+      "Extra mushrooms",
+      "Extra bell peppers"
+    ]
+  },
+  "Chilli Paneer": {
+    "description": "Soft paneer meets a bright chilli warmth in an easy plate to share.",
+    "suggestions": [
+      "Milder chilli",
+      "Extra paneer",
+      "Extra bell peppers"
+    ]
+  },
+  "Chilli Prawns": {
+    "description": "A prawn starter with the fresh spark of chilli from the first savoury bite.",
+    "suggestions": [
+      "Milder chilli",
+      "Lemon on the side",
+      "Sauce on the side"
+    ]
+  },
+  "CRISPY BABY CORN": {
+    "description": "A crisp baby corn starter that keeps its appeal from the first bite to the last.",
+    "suggestions": [
+      "Extra crispy",
+      "Light seasoning",
+      "Dip on the side"
+    ]
+  },
+  "Crispy Chicken": {
+    "description": "Chicken with a crisp finish, the kind of starter that gets passed around twice.",
+    "suggestions": [
+      "Extra crispy",
+      "Milder seasoning",
+      "Lemon on the side"
+    ]
+  },
+  "crispy corn": {
+    "description": "Crisp corn for the pleasure of small, golden bites between sips.",
+    "suggestions": [
+      "Extra crispy",
+      "Light seasoning",
+      "Dip on the side"
+    ]
+  },
+  "Dragon Chicken": {
+    "description": "A bright, bold chicken starter with enough character to stand on its own.",
+    "suggestions": [
+      "Milder seasoning",
+      "Sauce on the side",
+      "Extra spring onion"
+    ]
+  },
+  "FISH 65": {
+    "description": "Spiced fish in the spirit of a 65, with a warm finish that keeps the plate moving.",
+    "suggestions": [
+      "Lemon on the side",
+      "Milder seasoning",
+      "Extra crispy"
+    ]
+  },
+  "garlic chicken": {
+    "description": "Garlic carries through this chicken starter in a warm, fragrant finish.",
+    "suggestions": [
+      "Extra garlic",
+      "Milder chilli",
+      "Extra spring onion"
+    ]
+  },
+  "ghee roast chicken": {
+    "description": "Ghee and spice give this roast chicken its warm, savoury character.",
+    "suggestions": [
+      "Light ghee",
+      "Milder seasoning",
+      "Lemon on the side"
+    ]
+  },
+  "Gobi 65": {
+    "description": "Cauliflower with the lively warmth of a 65, easy to pick up and hard to leave alone.",
+    "suggestions": [
+      "Milder seasoning",
+      "Extra crispy",
+      "Lemon on the side"
+    ]
+  },
+  "Honey chicken": {
+    "description": "Honey rounds out the savoury taste of chicken with a touch of sweetness.",
+    "suggestions": [
+      "Light honey glaze",
+      "Milder seasoning",
+      "Sauce on the side"
+    ]
+  },
+  "kaju chicken": {
+    "description": "The gentle nuttiness of cashew adds a roundness to each chicken bite.",
+    "suggestions": [
+      "Extra cashews",
+      "Milder seasoning",
+      "Sauce on the side"
+    ]
+  },
+  "Loose Prawns": {
+    "description": "A prawn starter for the table that always finds room for one more seafood plate.",
+    "suggestions": [
+      "Extra crispy",
+      "Lemon on the side",
+      "Dip on the side"
+    ]
+  },
+  "Maharaja chicken": {
+    "description": "A hearty chicken starter with the boldness to set the pace for the rest of the meal.",
+    "suggestions": [
+      "Milder seasoning",
+      "Sauce on the side",
+      "Extra spring onion"
+    ]
+  },
+  "Mushroom 65": {
+    "description": "The earthy savour of mushrooms meets the lively warmth of a 65.",
+    "suggestions": [
+      "Milder seasoning",
+      "Extra crispy",
+      "Lemon on the side"
+    ]
+  },
+  "Paneer Majestic": {
+    "description": "A paneer starter that makes the first round of bites worth lingering over.",
+    "suggestions": [
+      "Extra paneer",
+      "Milder seasoning",
+      "Sauce on the side"
+    ]
+  },
+  "PANNER 65": {
+    "description": "Paneer gets the warm, spirited treatment of a classic 65.",
+    "suggestions": [
+      "Milder seasoning",
+      "Extra crispy",
+      "Lemon on the side"
+    ]
+  },
+  "Parichayam's Chinese Signature Dish": {
+    "description": "Parichayam’s own Chinese-style starter, a good excuse to let the kitchen choose the first bite.",
+    "suggestions": [
+      "Milder seasoning",
+      "Dips on the side",
+      "Extra plate"
+    ]
+  },
+  "Pepper Chicken": {
+    "description": "Pepper brings a fragrant heat to this chicken starter that stays after each bite.",
+    "suggestions": [
+      "Light pepper",
+      "Sauce on the side",
+      "Lemon on the side"
+    ]
+  },
+  "PRAWN PAKODA": {
+    "description": "Golden prawn pakoda for a savoury bite with a crisp edge.",
+    "suggestions": [
+      "Extra crispy",
+      "Lemon on the side",
+      "Dip on the side"
+    ]
+  },
+  "Rr chicken": {
+    "description": "An RR chicken starter for a table ready to make the most of the first course.",
+    "suggestions": [
+      "Milder seasoning",
+      "Sauce on the side",
+      "Extra spring onion"
+    ]
+  },
+  "Sesame Chicken": {
+    "description": "Sesame gives this chicken starter a softly nutty finish.",
+    "suggestions": [
+      "Extra sesame",
+      "Light seasoning",
+      "Sauce on the side"
+    ]
+  },
+  "Veg Manchurian": {
+    "description": "Vegetable Manchurian with a deeply savoury bite and plenty of reason to share.",
+    "suggestions": [
+      "Milder chilli",
+      "Extra spring onion",
+      "Extra gravy"
+    ]
+  },
+  "Cheese Fries": {
+    "description": "Golden fries with cheese in the spaces between. Take the first forkful while it is warm.",
+    "suggestions": [
+      "Extra cheese",
+      "Extra crispy",
+      "Cheese sauce on the side"
+    ]
+  },
+  "Chicken Lolli Pops (6 pcs)": {
+    "description": "Six chicken lollipops, made for picking up and passing around the table.",
+    "suggestions": [
+      "Extra crispy",
+      "Dips on the side",
+      "Light seasoning"
+    ]
+  },
+  "Chicken Nuggets": {
+    "description": "Golden chicken nuggets for dipping, sharing or keeping close.",
+    "suggestions": [
+      "Extra crispy",
+      "Dips on the side",
+      "Light seasoning"
+    ]
+  },
+  "Chicken Popcorn": {
+    "description": "Little bites of chicken with a crunch you can hear between sips.",
+    "suggestions": [
+      "Extra crispy",
+      "Dips on the side",
+      "Light seasoning"
+    ]
+  },
+  "Chicken Spring Rolls": {
+    "description": "A crisp shell gives way to a savoury chicken filling.",
+    "suggestions": [
+      "Extra crispy",
+      "Dip on the side",
+      "Cut in halves"
+    ]
+  },
+  "Chicken Strips (6 pcs)": {
+    "description": "Six golden chicken strips, each one ready for a dip.",
+    "suggestions": [
+      "Extra crispy",
+      "Dips on the side",
+      "Light seasoning"
+    ]
+  },
+  "Chicken Wings (6 pcs)": {
+    "description": "Six chicken wings to share by the plate and eat by hand.",
+    "suggestions": [
+      "Extra crispy",
+      "Sauce on the side",
+      "Milder seasoning"
+    ]
+  },
+  "chicken with loaded fries": {
+    "description": "Fries with chicken in each forkful, for when a side becomes the centre of attention.",
+    "suggestions": [
+      "Extra crispy",
+      "Extra cheese",
+      "Sauce on the side"
+    ]
+  },
+  "extra cheese": {
+    "description": "A little more cheese for the dish you already know you want.",
+    "suggestions": [
+      "Serve separately",
+      "Melt on the dish",
+      "Add to the side"
+    ]
+  },
+  "Fish Strips": {
+    "description": "Fish strips with a golden crunch, best savoured one at a time.",
+    "suggestions": [
+      "Extra crispy",
+      "Lemon on the side",
+      "Dip on the side"
+    ]
+  },
+  "Fried Anchovies": {
+    "description": "Small fried anchovies with a savoury taste of the coast.",
+    "suggestions": [
+      "Lemon on the side",
+      "Light seasoning",
+      "Extra crispy"
+    ]
+  },
+  "Hash Browns (3 pcs)": {
+    "description": "Three golden hash browns, crisp at the edges and soft at the centre.",
+    "suggestions": [
+      "Extra crispy",
+      "Light salt",
+      "Ketchup on the side"
+    ]
+  },
+  "Honey Chilli Potato Bites": {
+    "description": "Potato bites with the sweet warmth of honey and the bright lift of chilli.",
+    "suggestions": [
+      "Light honey glaze",
+      "Milder chilli",
+      "Sauce on the side"
+    ]
+  },
+  "honey wings": {
+    "description": "Honey gives these chicken wings a sweet finish worth slowing down for.",
+    "suggestions": [
+      "Light honey glaze",
+      "Extra crispy",
+      "Sauce on the side"
+    ]
+  },
+  "KFC Prawns": {
+    "description": "A crisp, golden prawn starter to pick up one bite at a time.",
+    "suggestions": [
+      "Extra crispy",
+      "Lemon on the side",
+      "Dip on the side"
+    ]
+  },
+  "Parichayam Conti Signature": {
+    "description": "A house continental starter for when you want to try something chosen by Parichayam.",
+    "suggestions": [
+      "Milder seasoning",
+      "Dips on the side",
+      "Extra plate"
+    ]
+  },
+  "Peri Peri Fries": {
+    "description": "Golden fries with peri peri warmth from the first crisp bite.",
+    "suggestions": [
+      "Peri peri seasoning on the side",
+      "Extra crispy",
+      "Dip on the side"
+    ]
+  },
+  "Salted Fries": {
+    "description": "Simply salted fries, the familiar plate that everyone reaches for first.",
+    "suggestions": [
+      "Light salt",
+      "Extra crispy",
+      "Ketchup on the side"
+    ]
+  },
+  "Veg Spring Rolls": {
+    "description": "A crisp wrap with a savoury vegetable filling, made for sharing.",
+    "suggestions": [
+      "Extra crispy",
+      "Dip on the side",
+      "Cut in halves"
+    ]
+  },
+  "Veg Strips": {
+    "description": "Golden vegetable strips for a quiet little crunch between courses.",
+    "suggestions": [
+      "Extra crispy",
+      "Light seasoning",
+      "Dip on the side"
+    ]
+  },
+  "Chilli Garlic Bread (4 pcs)": {
+    "description": "Garlic bread with a warm chilli finish on every toasted edge.",
+    "suggestions": [
+      "Milder chilli",
+      "Extra garlic butter",
+      "Extra toasted"
+    ]
+  },
+  "Exotic Garlic Bread (4 pcs)": {
+    "description": "A generous take on garlic bread for the table that likes something extra with the first round.",
+    "suggestions": [
+      "Extra toasted",
+      "Extra cheese",
+      "Garlic butter on the side"
+    ]
+  },
+  "Garlic Toast Bread (4 pcs)": {
+    "description": "Four pieces of garlic toast with the warm fragrance that makes room for another bite.",
+    "suggestions": [
+      "Extra garlic butter",
+      "Extra toasted",
+      "Light butter"
+    ]
+  },
+  "Chicken Fried Rice": {
+    "description": "Fried rice and chicken in an easy, savoury plate made to get you through a hungry afternoon.",
+    "suggestions": [
+      "Extra chicken",
+      "Light oil",
+      "Extra spring onion"
+    ]
+  },
+  "Egg Fried Rice": {
+    "description": "Egg and fried rice come together in a familiar, gently savoury plate.",
+    "suggestions": [
+      "Extra egg",
+      "Light oil",
+      "Extra spring onion"
+    ]
+  },
+  "Mixed Fried Rice": {
+    "description": "A mixed fried rice for when you want a little variety in every spoonful.",
+    "suggestions": [
+      "Light oil",
+      "Light seasoning",
+      "Extra spring onion"
+    ]
+  },
+  "Mushroom Fried Rice": {
+    "description": "Mushrooms lend a quiet earthy depth to each spoonful of fried rice.",
+    "suggestions": [
+      "Extra mushrooms",
+      "Light oil",
+      "Extra spring onion"
+    ]
+  },
+  "Paneer Fried Rice": {
+    "description": "Paneer makes a soft, savoury contrast against the grains of fried rice.",
+    "suggestions": [
+      "Extra paneer",
+      "Light oil",
+      "Extra spring onion"
+    ]
+  },
+  "Schezwan Chicken Fried Rice": {
+    "description": "Chicken fried rice with the bold, lasting heat of Schezwan seasoning.",
+    "suggestions": [
+      "Milder Schezwan seasoning",
+      "Light oil",
+      "Extra spring onion"
+    ]
+  },
+  "SCHEZWAN EGG FIREDRICE": {
+    "description": "Egg fried rice with a Schezwan kick that builds as you eat.",
+    "suggestions": [
+      "Milder Schezwan seasoning",
+      "Light oil",
+      "Extra spring onion"
+    ]
+  },
+  "Schezwan Veg Fried Rice": {
+    "description": "Vegetable fried rice with the lively heat of Schezwan.",
+    "suggestions": [
+      "Milder Schezwan seasoning",
+      "Light oil",
+      "Extra spring onion"
+    ]
+  },
+  "veg friedrice": {
+    "description": "Familiar vegetable fried rice with a savoury finish, easy to pair around the table.",
+    "suggestions": [
+      "Extra vegetables",
+      "Light oil",
+      "Extra spring onion"
+    ]
+  },
+  "Chicken Noodles": {
+    "description": "Savoury chicken and noodles for the kind of meal you can settle into.",
+    "suggestions": [
+      "Extra chicken",
+      "Light oil",
+      "Chilli sauce on the side"
+    ]
+  },
+  "Egg Noodles": {
+    "description": "Egg brings a mellow, savoury character to a long twirl of noodles.",
+    "suggestions": [
+      "Extra egg",
+      "Light oil",
+      "Chilli sauce on the side"
+    ]
+  },
+  "SCHEZWAN EGG NOODLES": {
+    "description": "Egg noodles with Schezwan heat for a forkful that wakes you up.",
+    "suggestions": [
+      "Milder Schezwan seasoning",
+      "Extra spring onion",
+      "Light oil"
+    ]
+  },
+  "Schezwan Firecracker Noodles (Chicken)": {
+    "description": "Chicken noodles with a warm, fiery finish that lives up to the Firecracker name.",
+    "suggestions": [
+      "Milder Schezwan seasoning",
+      "Extra spring onion",
+      "Light oil"
+    ]
+  },
+  "Schezwan Firecracker Noodles (Veg)": {
+    "description": "Vegetable noodles with the spark of Schezwan and room for another twirl.",
+    "suggestions": [
+      "Milder Schezwan seasoning",
+      "Extra spring onion",
+      "Light oil"
+    ]
+  },
+  "Veg Noodles": {
+    "description": "A simple plate of vegetable noodles for a comfortable, unhurried lunch.",
+    "suggestions": [
+      "Extra vegetables",
+      "Light oil",
+      "Chilli sauce on the side"
+    ]
+  },
+  "Cheese Maggie": {
+    "description": "The familiar warmth of Maggi with the soft stretch of melted cheese.",
+    "suggestions": [
+      "Extra cheese",
+      "Add butter",
+      "Milder seasoning"
+    ]
+  },
+  "Chicken Maggie": {
+    "description": "The quick comfort of Maggi made a little heartier with chicken.",
+    "suggestions": [
+      "Extra chicken",
+      "Milder seasoning",
+      "Add butter"
+    ]
+  },
+  "Egg Maggie": {
+    "description": "A bowl of Maggi with egg for a soft, savoury finish.",
+    "suggestions": [
+      "Extra egg",
+      "Milder seasoning",
+      "Add butter"
+    ]
+  },
+  "Veg Maggie": {
+    "description": "The familiar Maggi bite with vegetables, made for the days you want something easy.",
+    "suggestions": [
+      "Extra vegetables",
+      "Add butter",
+      "Milder seasoning"
+    ]
+  },
+  "Creamy Chicken Rice Bowl": {
+    "description": "Creamy chicken over rice, with the comfort of a meal you can take one spoonful at a time.",
+    "suggestions": [
+      "Extra sauce",
+      "Extra chicken",
+      "Sauce on the side"
+    ]
+  },
+  "Creamy Paneer Rice Bowl": {
+    "description": "Soft paneer and a creamy finish against rice, gentle and satisfying.",
+    "suggestions": [
+      "Extra paneer",
+      "Extra sauce",
+      "Sauce on the side"
+    ]
+  },
+  "Dal Makhani Rice Bowl": {
+    "description": "Dal makhani and rice, with the slow richness that makes this pairing feel like home.",
+    "suggestions": [
+      "Add butter",
+      "Extra dal",
+      "Rice on the side"
+    ]
+  },
+  "EXTRA CHICKEN 250 GRAMS": {
+    "description": "An extra 250 grams of chicken when you want to make a meal a little heartier.",
+    "suggestions": [
+      "Serve separately",
+      "Milder seasoning",
+      "Add to the rice bowl"
+    ]
+  },
+  "Fish Rice Bowl": {
+    "description": "Fish and rice in one bowl, with the easy comfort of a meal by the coast.",
+    "suggestions": [
+      "Lemon on the side",
+      "Light seasoning",
+      "Fish on the side"
+    ]
+  },
+  "GRILL CHICKEN WITH STEAMED VEGGIES": {
+    "description": "Grilled chicken and steamed vegetables, with room for the taste of each to come through.",
+    "suggestions": [
+      "Extra steamed vegetables",
+      "Lemon on the side",
+      "Light seasoning"
+    ]
+  },
+  "Paneer Rice Bowl": {
+    "description": "Paneer and rice with a savoury warmth that makes for an easy lunch.",
+    "suggestions": [
+      "Extra paneer",
+      "Extra vegetables",
+      "Milder seasoning"
+    ]
+  },
+  "PANNER WITH STEAMED VEGGIES": {
+    "description": "Soft paneer and steamed vegetables for a lighter plate with plenty to savour.",
+    "suggestions": [
+      "Extra steamed vegetables",
+      "Light seasoning",
+      "Paneer on the side"
+    ]
+  },
+  "Parichayam Conti Signature Rice Bowl": {
+    "description": "A house rice bowl for the sort of afternoon that calls for a Parichayam favourite.",
+    "suggestions": [
+      "Sauce on the side",
+      "Milder seasoning",
+      "Extra vegetables"
+    ]
+  },
+  "Peri Peri Chicken Rice Bowl": {
+    "description": "Peri peri gives this chicken and rice bowl a warm, lingering spark.",
+    "suggestions": [
+      "Milder peri peri",
+      "Extra chicken",
+      "Sauce on the side"
+    ]
+  },
+  "Peri Peri Paneer Rice Bowl": {
+    "description": "Soft paneer and rice with the spirited finish of peri peri.",
+    "suggestions": [
+      "Milder peri peri",
+      "Extra paneer",
+      "Sauce on the side"
+    ]
+  },
+  "plain rice bowl": {
+    "description": "A simple bowl of rice for catching the last spoonful of a favourite dish.",
+    "suggestions": [
+      "Add butter",
+      "Serve extra hot",
+      "Serve in a separate bowl"
+    ]
+  },
+  "Tandoori Chicken Rice Bowl": {
+    "description": "Tandoori chicken brings a fragrant warmth to a generous rice bowl.",
+    "suggestions": [
+      "Milder seasoning",
+      "Extra chicken",
+      "Lemon on the side"
+    ]
+  },
+  "bbq non-veg pizza": {
+    "description": "The rounded sweetness of barbecue gives this pizza a warm, savoury finish.",
+    "suggestions": [
+      "Light barbecue sauce",
+      "Extra cheese",
+      "Extra crisp crust"
+    ]
+  },
+  "Chicken Delight Pizza": {
+    "description": "Chicken, onion and bell peppers under cheese, for a slice full of familiar comforts.",
+    "suggestions": [
+      "Extra chicken",
+      "Extra cheese",
+      "Extra crisp crust"
+    ]
+  },
+  "Chicken Kheema Pizza": {
+    "description": "Kheema gives this pizza a savoury depth that carries from the first slice to the crust.",
+    "suggestions": [
+      "Extra kheema",
+      "Milder seasoning",
+      "Extra cheese"
+    ]
+  },
+  "Chicken Maharaja Pizza": {
+    "description": "Jalapeño warmth meets chicken, sweet corn and cheese on a slice with plenty going on.",
+    "suggestions": [
+      "Light jalapeño",
+      "Extra cheese",
+      "Extra sweet corn"
+    ]
+  },
+  "Chicken Supreme Pizza": {
+    "description": "A generous chicken pizza for the table that has come hungry.",
+    "suggestions": [
+      "Extra chicken",
+      "Extra cheese",
+      "Extra crisp crust"
+    ]
+  },
+  "CHICKEN TIKKA PIZZA": {
+    "description": "Chicken tikka brings its fragrant spice to a slice of pizza worth sharing.",
+    "suggestions": [
+      "Milder tikka seasoning",
+      "Extra chicken",
+      "Extra cheese"
+    ]
+  },
+  "Classic Margherita": {
+    "description": "A simple cheese pizza for the pleasure of pulling away the first warm slice.",
+    "suggestions": [
+      "Extra cheese",
+      "Extra crisp crust",
+      "Oregano on the side"
+    ]
+  },
+  "Farmhouse Harvest Pizza": {
+    "description": "Onion, peppers, mushrooms and tomato make this a lively vegetable slice.",
+    "suggestions": [
+      "Extra mushrooms",
+      "Extra bell peppers",
+      "Extra cheese"
+    ]
+  },
+  "Golden Corn Pizza": {
+    "description": "Sweet corn and bell peppers bring little pockets of brightness to melted cheese.",
+    "suggestions": [
+      "Extra sweet corn",
+      "Extra cheese",
+      "Extra crisp crust"
+    ]
+  },
+  "Paneer Tikka Pizza": {
+    "description": "Tikka paneer brings a warmly spiced softness to a slice with onion and cheese.",
+    "suggestions": [
+      "Extra paneer",
+      "Milder tikka seasoning",
+      "Extra cheese"
+    ]
+  },
+  "Parichayam Harbour Pizza": {
+    "description": "Prawns, chicken and sweet bell peppers under melted cheese, a generous slice with a taste of the coast.",
+    "suggestions": [
+      "Extra cheese",
+      "Extra bell peppers",
+      "Extra crisp crust"
+    ]
+  },
+  "PERIPERI CHICKEN PIZZA": {
+    "description": "Peri peri warmth follows a savoury chicken slice all the way to the crust.",
+    "suggestions": [
+      "Milder peri peri",
+      "Extra cheese",
+      "Extra crisp crust"
+    ]
+  },
+  "Veg Delight Pizza": {
+    "description": "Tomato and bell pepper brighten this familiar vegetable and cheese pizza.",
+    "suggestions": [
+      "Extra bell peppers",
+      "Extra tomato",
+      "Extra cheese"
+    ]
+  },
+  "Veg Supreme Pizza": {
+    "description": "Black olives bring a salty finish to a colourful slice of vegetable pizza.",
+    "suggestions": [
+      "Extra black olives",
+      "Extra bell peppers",
+      "Extra cheese"
+    ]
+  },
+  "PANEER QUESADILLA": {
+    "description": "Warm paneer tucked into a toasted tortilla, with a satisfying bite at the fold.",
+    "suggestions": [
+      "Extra paneer",
+      "Extra toasted",
+      "Dip on the side"
+    ]
+  },
+  "QUESADILLA CHICKEN": {
+    "description": "A toasted tortilla with a savoury chicken filling, easy to eat one good wedge at a time.",
+    "suggestions": [
+      "Extra chicken",
+      "Extra toasted",
+      "Dip on the side"
+    ]
+  },
+  "EXTRA EGG": {
+    "description": "One extra egg to make a favourite dish a little more substantial.",
+    "suggestions": [
+      "Serve on the side",
+      "Cook the yolk through",
+      "Add to the main dish"
+    ]
+  },
+  "extra milk": {
+    "description": "A little extra milk for a coffee or tea you prefer on the gentler side.",
+    "suggestions": [
+      "Serve warm",
+      "Serve cold",
+      "Bring with the drink"
+    ]
+  },
+  "MONSTER TIN WHITE": {
+    "description": "The white Monster energy drink served in its original tin.",
+    "suggestions": [
+      "Serve chilled",
+      "Glass on the side",
+      "Leave the tin unopened"
+    ]
+  },
+  "sweet corn add  on": {
+    "description": "An extra helping of sweet corn for a little brightness in another dish.",
+    "suggestions": [
+      "Serve on the side",
+      "Add to the main dish",
+      "Add butter"
+    ]
+  },
+  "takeaway": {
+    "description": "A takeaway option for carrying part of the meal with you.",
+    "suggestions": [
+      "Pack separately",
+      "Cutlery please",
+      "Pack sauces on the side"
+    ]
+  },
+  "TAKE AWAY": {
+    "description": "A takeaway packing option for bringing your order along.",
+    "suggestions": [
+      "Pack separately",
+      "Cutlery please",
+      "Pack sauces on the side"
+    ]
+  },
+  "takeawy": {
+    "description": "A takeaway packing option for food you would like to enjoy later.",
+    "suggestions": [
+      "Pack separately",
+      "Cutlery please",
+      "Pack sauces on the side"
+    ]
+  }
+}

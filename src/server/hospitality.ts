@@ -1,6 +1,7 @@
 import { timingSafeEqual, createHash } from 'node:crypto';
 import { dishes, dishLabel } from '@/features/menu/menu';
 import type { OrderReceipt, ReservationReceipt, StaffOrder, StaffReservation } from '@/features/hospitality/types';
+import { orderNoteLimit, orderQuantityLimit, tableCount } from '@/lib/table-service';
 import { getDatabase } from './database';
 import { count, reference, RequestError, textField } from './http';
 
@@ -21,9 +22,9 @@ export function submitOrder(input: Record<string, unknown>) {
   const id = reference(input.reference);
   const dish = dishes.find(item => item.id === input.dishId);
   if (!dish) throw new RequestError('This dish is unavailable.');
-  const table = count(input.table, 999, 'Table number');
-  const quantity = count(input.quantity, 20, 'Quantity');
-  const note = textField(input.note, 240, 'Order note');
+  const table = count(input.table, tableCount, 'Table number');
+  const quantity = count(input.quantity, orderQuantityLimit, 'Quantity');
+  const note = textField(input.note, orderNoteLimit, 'Order note');
   const db = getDatabase();
 
   db.prepare(
@@ -140,7 +141,7 @@ export function updateStaffQueue(input: Record<string, unknown>) {
     ).run(status, id, status, status);
     if (!result.changes) throw new RequestError('The order was already updated.', 409);
   } else if (input.type === 'reservation') {
-    if (input.status === 'confirmed') confirmReservation(id, count(input.table, 999, 'Table number'));
+    if (input.status === 'confirmed') confirmReservation(id, count(input.table, tableCount, 'Table number'));
     else if (input.status === 'declined') {
       const result = db.prepare("UPDATE reservations SET status = 'declined' WHERE id = ? AND status = 'pending'").run(id);
       if (!result.changes) throw new RequestError('The reservation was already updated.', 409);

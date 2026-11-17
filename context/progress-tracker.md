@@ -16,3 +16,8 @@ Private review deployment through Sites.
 - Relocated the Next.js app under src and introduced a Node runtime with SQLite for orders, reservations, and staff actions.
 - Added a vector logo, individual letter reveals, one-card phone carousel, and six illustrated staff greetings.
 - Verified the original menu and image inventory, 320-pixel fit, order and reservation dialogs, and staff confirmation in a local browser. Exercised concurrent retry deduplication, authorization, time validation, privacy of booking lookups, and overlapping-table protection.
+
+## Dish and category refinement
+- Added unique editorial descriptions and three kitchen note suggestions for every item.
+- Verified the mobile category drawer, uncropped burger photo, QR table prefill, table 15 ordering, quantity bounds, and persisted kitchen notes.
+- Verified menu assets, the production build, TypeScript, and the high-contrast browser tab icon.

@@ -13,7 +13,7 @@ Open http://localhost:3000. Copy .env.example to .env.local and set CAFE_STAFF_P
 
 ## Café workflow
 
-- Put the table number in each table QR URL, such as /?table=4. Guests can also enter it when ordering.
+- Put the table number in each table QR URL, such as /?table=4. Guests can also choose from tables 1 through 15 when ordering.
 - Orders appear on /staff. Staff can move an order from queued to preparing to served, or cancel it.
 - Reservations start pending. Staff assign a physical table when confirming. The same table cannot have overlapping confirmed bookings. Seating defaults to 90 minutes and can be set with CAFE_RESERVATION_MINUTES.
 - Guests can check their reservation with the reference shown after submitting. The public lookup returns booking status, date, party size and assigned table.
