@@ -1,6 +1,6 @@
 # Menu photography
 
-Final assets are in dist/media. The menu cards use numbered WebP files and the hero uses hero.webp and hero-small.webp.
+Final assets are in public/media. The menu cards use numbered WebP files and the hero uses hero.webp and hero-small.webp.
 
 - Classic Margherita, 250.webp, by Roberto Vincenzo Minasi. [Unsplash](https://unsplash.com/photos/a-pizza-with-mozzarella-and-basil-on-a-plate-L4W1uX1xwlQ)
 - Cold Brew, 99.webp, by Nguyễn Tiến Thịnh. [Pexels](https://www.pexels.com/photo/cold-brew-coffee-with-ice-served-in-a-glass-34046801/)
@@ -207,4 +207,3 @@ Row 2: plain empty walnut tile | plain empty walnut tile | plain empty walnut ti
 Row 3: plain empty walnut tile | plain empty walnut tile | plain empty walnut tile | plain empty walnut tile
 Row 4: plain empty walnut tile | plain empty walnut tile | plain empty walnut tile | plain empty walnut tile
 Every cell is a separately composed premium editorial menu photo of exactly that subject in a coastal Indian café with rich natural warm sunlight, appetizing realistic textures, ivory or forest green ceramics and walnut or warm plaster tabletop. An individual glass, bowl, or plate where appropriate. Pay attention to variants, vegetarian means absolutely no meat, non-veg includes visible chicken unless otherwise specified. Fill the whole sheet edge to edge. No elements spilling between photos. Make it look like sixteen separately shot menu photographs assembled precisely.
-

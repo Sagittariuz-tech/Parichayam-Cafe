@@ -7,8 +7,8 @@
   --rust: #a3462d;
   --muted: #5e5e4f;
   --line: #d6cebe;
-  --display: "Instrument Serif", Georgia, serif;
-  --body: "DM Sans", system-ui, sans-serif;
+  --display: var(--font-display), Georgia, serif;
+  --body: var(--font-body), system-ui, sans-serif;
   --gutter: clamp(18px, 4.7vw, 75px);
 }
 *, *::before, *::after { box-sizing: border-box; }

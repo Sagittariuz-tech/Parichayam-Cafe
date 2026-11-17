@@ -20,10 +20,10 @@ for (const value of source.replace(/^\uFEFF/, '').split(/\r?\n/)) {
 assert.equal(categories.length, 30);
 assert.equal(id, 266);
 assert.ok(categories.every(category => category.items.length));
-const asset = path => new URL('../dist/media/' + path, import.meta.url);
+const asset = path => new URL('../public/media/' + path, import.meta.url);
 if (process.argv.includes('--verify-images')) {
-  await Promise.all(['hero.webp', 'favicon.png', ...categories.flatMap(category => category.items.map(item => item.id + '.webp'))]
+  await Promise.all(['hero.webp', 'hero-small.webp', 'favicon.png', ...categories.flatMap(category => category.items.map(item => item.id + '.webp'))]
     .map(path => access(asset(path))));
 }
-await writeFile(new URL('../dist/menu-data.js', import.meta.url), 'window.parichayamMenu = ' + JSON.stringify(categories) + ';\n');
+await writeFile(new URL('../data/menu.json', import.meta.url), JSON.stringify(categories, null, 2) + '\n');
 console.log('Validated ' + id + ' entries across ' + categories.length + ' categories.');

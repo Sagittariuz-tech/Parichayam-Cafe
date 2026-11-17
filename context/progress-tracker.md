@@ -7,3 +7,7 @@
 - Checked the phone layout at 320 and 390 pixels, desktop composition, search, empty state, pagination, dietary filtering and dish dialogs.
 ## Release
 Private review deployment through Sites.
+
+## Next.js migration
+- Ported the catalog and dialogs to React and TypeScript, keeping the captured menu and all 269 media files byte-for-byte.
+- Verified menu inputs and image coverage, TypeScript, static production build, and locally tested search, pagination, keyboard dismissal, and mobile category and diet controls.

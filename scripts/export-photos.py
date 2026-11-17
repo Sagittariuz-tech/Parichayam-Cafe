@@ -3,7 +3,7 @@ import argparse
 from PIL import Image, ImageDraw
 
 PROJECT = Path(__file__).resolve().parent.parent
-MEDIA = PROJECT / "dist" / "media"
+MEDIA = PROJECT / "public" / "media"
 
 def export_hero(path):
     with Image.open(path) as original:
