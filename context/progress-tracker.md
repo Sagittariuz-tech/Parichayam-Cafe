@@ -11,3 +11,8 @@ Private review deployment through Sites.
 ## Next.js migration
 - Ported the catalog and dialogs to React and TypeScript, keeping the captured menu and all 269 media files byte-for-byte.
 - Verified menu inputs and image coverage, TypeScript, static production build, and locally tested search, pagination, keyboard dismissal, and mobile category and diet controls.
+
+## In-house service and interface update
+- Relocated the Next.js app under src and introduced a Node runtime with SQLite for orders, reservations, and staff actions.
+- Added a vector logo, individual letter reveals, one-card phone carousel, and six illustrated staff greetings.
+- Verified the original menu and image inventory, 320-pixel fit, order and reservation dialogs, and staff confirmation in a local browser. Exercised concurrent retry deduplication, authorization, time validation, privacy of booking lookups, and overlapping-table protection.

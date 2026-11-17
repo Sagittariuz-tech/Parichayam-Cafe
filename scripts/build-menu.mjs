@@ -25,5 +25,5 @@ if (process.argv.includes('--verify-images')) {
   await Promise.all(['hero.webp', 'hero-small.webp', 'favicon.png', ...categories.flatMap(category => category.items.map(item => item.id + '.webp'))]
     .map(path => access(asset(path))));
 }
-await writeFile(new URL('../data/menu.json', import.meta.url), JSON.stringify(categories, null, 2) + '\n');
+await writeFile(new URL('../src/data/menu.json', import.meta.url), JSON.stringify(categories, null, 2) + '\n');
 console.log('Validated ' + id + ' entries across ' + categories.length + ' categories.');

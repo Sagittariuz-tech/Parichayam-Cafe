@@ -1,11 +1,16 @@
 # Architecture
+
 ## Stack
-Next.js App Router, React and TypeScript. GSAP handles entrances and dialog animation. Lenis smooths wheel scrolling while touch stays native.
+Next.js App Router, React and TypeScript on Node 24. GSAP ScrollTrigger and Lenis share the animation clock. Native scrolling handles touch gestures.
+
 ## Boundaries
-app/ owns the root layout, route and styles. components/ implements React views and browser interactions. lib/menu.ts defines catalog types and search. scripts/build-menu.mjs validates menu-source.txt and emits data/menu.json. public/media/ holds optimized WebP assets.
+src/app owns page and API routes. src/features/menu owns browsing, render logic, and catalog data access. src/features/hospitality owns reservation UI, order acknowledgements and the staff desk. src/server validates and persists service requests. src/components contains shared UI controls.
+
 ## Storage and access
-The Next.js build creates a static export in out/. Qubillo handles ordering, cart, and table context.
+SQLite persists orders and reservations. Configure a durable local disk in production. A staff passphrase protects the queue and mutations. Guests can check a reservation via its UUID, which returns no guest name, phone or notes.
+
 ## Invariants
-Keep pricing and dietary values sourced. Treat missing source tags as unknown. Render a bounded page of results at a time. Respect reduced motion. Preserve the numbered image mapping when changing the catalog.
+Use the existing snapshot for menu prices and labels. Match media by item ID. A retry keeps the same request ID. Confirm a reservation only after assigning a non-overlapping table. A successful order means it was saved to the kitchen queue.
+
 ## Local development
-Use npm ci to install dependencies and npm run dev to start the app. Run npm run menu:verify to check the snapshot and image inventory, then npm run build to test the production export.
+Use npm ci, npm run dev and a CAFE_STAFF_PASSWORD in .env.local for staff access. Use npm run menu:verify, npm run build and npm run typecheck for release checks. This release needs a Node host with persistent storage for production service.

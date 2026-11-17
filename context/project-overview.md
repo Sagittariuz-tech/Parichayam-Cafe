@@ -1,9 +1,9 @@
 # Project overview
-## Goal
-Turn the Parichayam Café table QR menu into a fast, photo-led mobile catalog with a clear path to the existing ordering system.
+## Overview
+A photo-led café menu for diners on mobile, with in-house orders and table reservations.
 ## Core flow
-Open the menu, explore the featured dishes or browse all categories, inspect details, and use the original table-ordering link when ready.
+Guests browse or filter dishes, then submit an item order for a table or request a reservation. Staff handle the kitchen queue and confirm table assignments.
 ## Scope
-Preserve all 30 categories, 266 entries, source prices, dietary flags, and published descriptions. Provide an image for each entry and label the images illustrative. Search and dietary filters work locally.
+Preserve 30 categories, 266 entries, source prices, dietary flags, descriptions and images. Keep reservations checkable by reference and show receipt messaging once a service request is saved.
 ## Success criteria
-The catalog matches Qubillo, loads over a single static origin, and can be navigated with touch and keyboard.
+Browse comfortably by touch or keyboard. Save orders and reservations, show their status, and allow staff to manage service from the protected staff desk.

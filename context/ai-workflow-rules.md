@@ -1,3 +1,3 @@
 # AI workflow rules
-Read this context and the active spec before changing the site. Verify the source menu before editing menu facts. Preserve the ordering destination and the existing data shape when possible.
-Track decisions and concrete test results in progress-tracker.md. Verify touch, keyboard, and reduced-motion paths for interaction changes.
+Read the six context files and active spec before editing. Verify the source before changing menu facts. Preserve dish IDs and image mapping. Treat order receipts and reservation confirmations as service states backed by data.
+Track scope decisions and verification in progress-tracker.md. Check touch and keyboard interactions, reduced motion, API failures, and retry behavior for changes in those paths.

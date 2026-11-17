@@ -1,29 +1,39 @@
 # Parichayam Café
 
-A mobile-first digital table menu built with Next.js App Router, React and TypeScript. The catalog contains 266 items across 30 categories. Guests browse here and follow the table ordering link to Qubillo.
+A mobile-first Next.js App Router site with a photo menu, table ordering, reservations, and a private staff desk.
 
 ## Run locally
 
-Use Node.js 22 or later.
+Use Node.js 24 or later.
 
     npm ci
     npm run dev
 
-Open http://localhost:3000.
+Open http://localhost:3000. Copy .env.example to .env.local and set CAFE_STAFF_PASSWORD to a strong passphrase before opening http://localhost:3000/staff. Restart Next.js when changing environment values.
 
-## Build and verify
+## Café workflow
+
+- Put the table number in each table QR URL, such as /?table=4. Guests can also enter it when ordering.
+- Orders appear on /staff. Staff can move an order from queued to preparing to served, or cancel it.
+- Reservations start pending. Staff assign a physical table when confirming. The same table cannot have overlapping confirmed bookings. Seating defaults to 90 minutes and can be set with CAFE_RESERVATION_MINUTES.
+- Guests can check their reservation with the reference shown after submitting. The public lookup returns booking status, date, party size and assigned table.
+- The staff desk presents the phone number for manual follow-up. The app does not send SMS or email or process payment.
+
+## Build and host
 
     npm run menu:verify
     npm run build
     npm run typecheck
+    npm start
 
-Next.js writes the deployable static site to out/. Serve that folder with any static web server.
+Serve over HTTPS on a Node host with a persistent disk. Set CAFE_DB_PATH to a writable path on that disk and configure the staff password in the host's environment. Run a single service instance for the café database. The default .cafe-data directory is ignored by Git.
 
 ## Project layout
 
-- app/ contains the page, root layout and styles.
-- components/ contains the catalog, dialogs, landing sections and motion.
-- lib/menu.ts handles display and search.
-- menu-source.txt is the menu snapshot. Run npm run menu:build after editing it to regenerate data/menu.json.
-- public/media/ contains the WebP images. Each numbered filename matches a menu item ID.
-- context/ contains the six-file project context. Image credits and prompts are in context/specs/photo-production.md.
+- src/app/ contains route handlers, pages, metadata and global styles.
+- src/features/menu/ contains dish browsing, filtering and storefront motion.
+- src/features/hospitality/ contains the order and reservation screens, staff desk, and illustrated greetings.
+- src/server/ contains SQLite storage, service validation and staff access.
+- menu-source.txt and src/data/menu.json store the original catalog and its generated runtime data. Use npm run menu:build after editing the snapshot.
+- public/media/, public/brand/ and public/staff/ contain menu photos, the SVG mark and character art.
+- context/ contains the six-file project context, specs and image credits.
