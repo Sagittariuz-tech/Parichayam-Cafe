@@ -194,3 +194,11 @@ footer .brand em { color: #f0a789; }
   .site-header .brand { --logo-size: 27px; font-size: 18px; }
   .site-header .button { gap: 3px; padding-inline: 5px; }
 }
+
+.owner-login-link { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 8px 14px; border: 1px solid var(--line); border-radius: 6px; font-size: 12px; font-weight: 600; white-space: nowrap; transition: background .2s, border-color .2s; }
+.owner-login-link:hover { background: var(--cream); border-color: var(--forest); }
+@media (max-width: 760px) {
+  .site-header { flex-wrap: wrap; padding-block: 10px; }
+  .site-header nav { display: contents; }
+  .site-header .owner-login-link { flex-basis: 100%; min-height: 44px; margin-top: 2px; padding: 8px 12px; font-size: 11px; }
+}

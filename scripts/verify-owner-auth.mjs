@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+const base='http://127.0.0.1:3000';
+const request=(path,options={})=>fetch(base+path,{redirect:'manual',...options});
+const login=(password,origin=base)=>request('/api/owner-session',{method:'POST',headers:{'content-type':'application/json',origin},body:JSON.stringify({email:'owner@parichayam.cafe',password})});
+assert.equal((await request('/dashboard')).status,307);
+assert.equal((await login('incorrect')).status,401);
+assert.equal((await login('Parichayam@2026','https://untrusted.example')).status,403);
+const result=await login('Parichayam@2026');assert.equal(result.status,200);
+const raw=result.headers.get('set-cookie');assert.match(raw,/HttpOnly/i);assert.match(raw,/SameSite=strict/i);
+const cookie=raw.split(';')[0];assert.equal((await request('/dashboard',{headers:{cookie}})).status,200);
+assert.equal((await request('/dashboard',{headers:{cookie:cookie+'tampered'}})).status,307);
+assert.equal((await request('/api/owner-session',{method:'DELETE',headers:{origin:base,cookie}})).status,200);
+console.log('PASS: owner route protection, wrong credentials, cross-origin rejection, signed login cookie, tampering rejection and logout.');

@@ -45,3 +45,13 @@ Serve over HTTPS on a Node host with a persistent disk. Set CAFE_DB_PATH to a wr
 - menu-source.txt and src/data/menu.json store the original catalog and its generated runtime data. Use npm run menu:build after editing the snapshot.
 - public/media/, public/brand/ and public/staff/ contain menu photos, the SVG mark and character art.
 - context/ contains the six-file project context, specs and image credits.
+
+## Owner dashboard preview
+
+Open /dashboard (redirects to /owner-login). Demo credentials are owner@parichayam.cafe and Parichayam@2026. This is a sample workspace, not live café reporting. Browser-local changes do not update the public menu, kitchen queue or reservation database. CSV exports open in Excel; the report print view supports Save as PDF.
+
+The login is verified on the server and uses an eight-hour signed HttpOnly SameSite cookie. Optional CAFE_OWNER_EMAIL, CAFE_OWNER_PASSWORD and CAFE_OWNER_SESSION_SECRET override the dummy defaults. Shared demo credentials and the demo signing key are not production identity controls. Connect durable business data and configure private credentials before real owner use.
+
+Sales periods are rolling 1/7/30/365 days. Revenue counts completed orders only; refunded and cancelled amounts are excluded. Operating expenses are weekly budget estimates prorated to the selected period. Guest IDs, reviews, staff activity and transactions are simulated. New and returning guests are compared against the prior sample history.
+
+Run node scripts/verify-owner-auth.mjs against the local production server to check login protection and cookie behavior.

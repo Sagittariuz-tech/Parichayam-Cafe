@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { featuredDishes, type Dish } from './menu';
 import DishCard from './dish-card';
 import { RevealWords } from './reveal-words';
@@ -25,6 +26,7 @@ export function SiteHeader({ onReserve }: ReserveProps) {
           <a className="nav-link" href="#highlights">Highlights</a>
           <a className="nav-link" href="#menu">Menu</a>
           <button className="button button-reserve" type="button" aria-haspopup="dialog" onClick={onReserve}>Reserve a table <span className="reserve-arrow" aria-hidden="true">↗</span></button>
+          <Link className="owner-login-link" href="/owner-login">Login <span aria-hidden="true">↗</span></Link>
         </nav>
       </header>
     </>
@@ -104,6 +106,7 @@ export function SiteFooter({ onReserve }: ReserveProps) {
         <div><Brand /><p>Menu images are illustrative.</p></div>
         <div className="footer-links">
           <button type="button" className="plain-action" aria-haspopup="dialog" onClick={onReserve}>Reserve a table ↗</button>
+          <Link href="/owner-login">Login ↗</Link>
           <a href="#top">Back to top ↑</a>
         </div>
       </div>

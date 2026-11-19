@@ -35,3 +35,17 @@ Private review deployment through Sites.
 - Identified local SQLite persistence as incompatible with Vercel serverless hosting. The user deferred database integration and requested a message-only order preview.
 - Added default database-free demo receipts with varied character messages and explicit disclosure that no ticket reached the kitchen. Live mode remains opt-in and never silently falls back to demo.
 - Verified the production API with VERCEL=1 and an unusable database path: Chicken Sandwich success, stable reference replay, seven validation failures, and live failure without a false receipt. Production build, TypeScript, and all 266 menu records passed. No Vercel deployment was performed.
+
+## Owner dashboard
+- Built a responsive ivory/forest owner workspace with GSAP and Lenis, revenue periods and chart exploration, order statuses, bestsellers, inventory, menu editing, expenses, customer patterns, peak hours/days, staff activity, offers, reservations, reviews, payments, website drafts and reports.
+- Added a server-checked dummy owner login with signed HttpOnly expiring cookies. Verified anonymous redirects, wrong-password rejection, origin checks, authenticated access, tampering rejection and logout.
+- Verified stock editing and persistence through refresh, alert recalculation, order status revenue recalculation, exact menu search, downloaded CSV and the 390px phone layout. Production build, TypeScript and all 266 catalog entries passed.
+- Data is explicitly simulated; edits persist in this browser only. CSV opens in Excel and printing supports PDF. Real backend integration and production owner identity remain future work. No deployment performed.
+## Home page owner access
+- Added Owner login entry points in the home page header and footer. The phone header gives the link its own touch-friendly row.
+- Links open the existing authenticated owner flow. Verified the rendered links, owner authentication regression checks, production build, TypeScript and all 266 menu records.
+
+## Role login previews
+- Home-page Login opens Admin (Owner), Staff and Developer role selection. Each role has a separate server-checked session and protected workspace.
+- Staff preview supports attendance, leave requests and ingredient notes. Developer preview saves configuration notes locally. Shared backend submission remains deferred.
+- Production build and three-role route isolation checks passed.
