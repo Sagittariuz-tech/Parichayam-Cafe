@@ -55,3 +55,6 @@ The login is verified on the server and uses an eight-hour signed HttpOnly SameS
 Sales periods are rolling 1/7/30/365 days. Revenue counts completed orders only; refunded and cancelled amounts are excluded. Operating expenses are weekly budget estimates prorated to the selected period. Guest IDs, reviews, staff activity and transactions are simulated. New and returning guests are compared against the prior sample history.
 
 Run node scripts/verify-owner-auth.mjs against the local production server to check login protection and cookie behavior.
+
+
+After two years
